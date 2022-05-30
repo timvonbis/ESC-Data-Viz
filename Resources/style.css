@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h3 {
+    color: whitesmoke;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    margin: 40px 0px;
+
+}
+
+body {
+    background-color: hsl(300, 0%, 20%);
+}
+
+.main {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+rect {
+    fill: black;
+}
