@@ -23,3 +23,19 @@ body {
 rect {
     fill: black;
 }
+
+footer {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+footer a {
+    font-family: monospace;
+    font-size: 15px;
+    color:lightgrey;
+    text-align: center;
+}
+footer a:visited {
+    color:lightgray;
+    text-align: center;
+}
