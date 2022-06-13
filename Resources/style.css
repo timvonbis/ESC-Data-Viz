@@ -1,41 +1,217 @@
 *{
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
+}
+
+section {
+    width: 100vw;
+    position: relative;
+    height: 100vh;
+    background-color: darkgrey;
+    display: block;
+    margin-bottom: 400px;
+    color: hsl(300, 0%, 20%);
+}
+
+.sectionHeader {
+    height: 30%;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: left;
+}
+.sectionBody{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+p.legende {
+    color: whitesmoke;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    line-height: 130%;
+    margin-bottom: 0.5em;
+}
+
+p{
+    color: whitesmoke;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    line-height: 130%;
+    margin-bottom: 0.5em; 
 }
 
 h3 {
     color: whitesmoke;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 25px;
-    margin: 40px 0px;
+    font-family: mixta-pro, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.2em;
+    margin: 12vh 45px;
+}
+
+h2{
+
+        color: whitesmoke;
+        font-family: mixta-pro, serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 6.5em;
+    
+}
+
+h1{ color: whitesmoke;
+    font-family: mixta-pro, serif;
+    font-weight: 700;
+    font-style: normal;
 
 }
 
-body {
-    background-color: hsl(300, 0%, 20%);
+span{
+    width: 700px;
+
+    display:inline-block;
+
 }
 
-.main {
-    max-width: 800px;
-    margin: 50px auto;
+figure {
+    display: flex;
+ justify-content: center;
+
+}
+
+
+/* Section Styling */
+
+
+section.panel.eins{
+ background: url(./img/bg1.svg);
+ background-repeat: no-repeat;
+ background-size: cover;
+} 
+
+section.panel.zwei{
+    background: url(./img/bg/blau-1.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section.panel.drei{
+    background: url(./img/bg1.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Video-Section */
+
+.video-container {
+    width: 100vw;
+    position: relative;
+    height: 100vh;
+}
+.video-container video {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+
+}
+.video-container .video-title {
+    width: 100%; 
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(100, 100, 100, 0.60);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-container h2 {
+    position: absolute;
+   width:auto;
+   
+}
+
+
+/* Grafik allgemein */
+
+div.legende{
+    font-family: Helvetica, sans-serif;
+    font-size: 0.6em;
+    line-height: 150%;
+  
+}
+.legendOrdinal{
+    font-family: Helvetica, sans-serif;
+    font-size: 0.9em;
+    line-height: 130%;
 }
 
 rect {
-    fill: black;
+    fill: white;
 }
 
-footer {
-    max-width: 800px;
-    margin: 50px auto;
+figure line{
+    stroke: white;
+} 
+figure path{
+    stroke: white;
+    fill: none;
+    stroke-width: 2;
+}
+figure text {
+    fill: white;
+}
+figure .grid line {
+    stroke: grey;
+}
+figure .grid path{
+    visibility: hidden;
 }
 
-footer a {
+
+
+/* Sprache */
+
+g.bereich .lang-allowed {
+    fill: rgba(19, 13, 26, 45%); 
+       transition: fill 0.1s;
+}
+
+g.bereich:hover .lang-allowed {
+    fill: rgba(19, 13, 26, 80%);
+    transition: fill 0.1s;
+
+}
+
+path.lang-fr {
+    stroke: red;
+}
+path.lang-de {
+    stroke: gold;
+}
+path.lang-it {
+    stroke: green;
+}
+
+path.lang-en {
+    stroke: blue;
+    stroke-width: 2px;
+}
+
+
+
+
+
+/* Footer */
+
+a {
     font-family: monospace;
     font-size: 15px;
     color:lightgrey;
     text-align: center;
 }
-footer a:visited {
+a:visited {
     color:lightgray;
     text-align: center;
 }
