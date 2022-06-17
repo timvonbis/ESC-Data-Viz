@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Der ESC in Grafiken
+    </title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link href="./Resources/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/fre7yjs.css">
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+    <script src="./Resources/script.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="main">
+        <section class="panel eins">
+            <h1>Der Eurovision Song Contest in Daten</h1>
+            <h1>Oder: Der perfekte Eurovision-Song</h1>
+
+        </section>
+        <section class="panel vier">
+            <div class="video-container sprache">
+                <video muted autoplay loop>
+                    <source src="./Resources/vid/Sprache.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                    <h2>Sprache der Texte</h2>
+                </div>
+            </div>
+        </section>
+        <section class="panel facts">
+            <div class="facts-container">
+                <div class="fact">
+                    <span class="text">
+                        <h4>Der Song mit den meisten Sprachen</h4>
+                        <p>
+                            Bulgariens Beitrag im Jahr 2012, &bdquo;Love Unlimited&ldquo; hat einen bulgarischen Text,
+                            mit S&auml;tzen auf T&uuml;rkisch, Griechisch, Spanisch, Serbokroatisch, Franz&ouml;sisch,
+                            Romani, Italienisch, Aserbaidschanisch, Arabisch und Englisch.
+                        </p>
+                    </span>
+                    <figure>
+                        <img class="factimg" src="./Resources/img/facts/bulgarien-love.jpg">
+                    </figure>
+                </div>
+
+            </div>
+            <div class="facts-container">
+                <div class="fact">
+                    
+                    <span class="text">
+                        <h4>Fantasiesprachen</h4>
+                        <p>
+                            Immer wieder texten L&auml;nder Ausschnitte von Liedern in Fantasiesprachen. Aber nur
+                            Belgien ist gleich zweimal (2008 und 2003) mit Liedern aus komplett konstruierter Sprache
+                            angetreten.
+                        </p>
+                    </span>
+
+        </section>
+
+        <section class="panel drei">
+            <div class="sectionHeader">
+                <h3>
+                    Anzahl ESC-Beitr&aumlge nach Sprache
+                </h3>
+            </div>
+            <div class="sectionBody">
+                <figure id="language" class="diagramm">
+                </figure>
+            </div>
+        </section>
+
+        <section class="panel drei">
+            <div class="sectionHeader">
+                <h3>
+                    Erfolg ESC-Beitr&aumlge nach Sprache
+                </h3>
+            </div>
+            <div class="sectionBody">
+                <figure id="langsuccess" class="diagramm">
+                </figure>
+                <span class="text">
+                    <h4>Fantasiesprachen</h4>
+                    <p>
+                        Immer wieder texten L&auml;nder Ausschnitte von Liedern in Fantasiesprachen. Aber nur
+                        Belgien ist gleich zweimal (2008 und 2003) mit Liedern aus komplett konstruierter Sprache
+                        angetreten.
+                    </p>
+                </span>
+            </div>
+        </section>
+
+        <section class="panel vier">
+            <div class="video-container sprache">
+                <video muted autoplay loop>
+                    <source src="./Resources/vid/Komponisten.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">
+                    <h2>Wer schreibt den Song?</h2>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="panel zwei">
+            <div class="sectionHeader">
+                <h3>
+                    Frauenanteil bei den Komponist:innen
+                </h3>
+            </div>
+            <div class="sectionBody">
+                <figure id="gender" class="diagramm">
+                    <svg class="compgender" width="800" height="400">
+                    </svg>
+                </figure>
+            </div>
+        </section>
+
+        <section class="panel ende">
+            <div class="sectionHeader">
+                <h3>Ausblick &amp; Github</h3>
+            </div>
+            <div class="sectionBody">
+                <span>
+                    <p>Weiterer Ausblick f&uuml;r das Projekt:<br />
+                        Narrative (erfolgsversprechendster ESC-Song anhand von Daten) f&uuml;hrt durch verschiedene
+                        Kapitel<br />
+                        In den Kapiteln Daten und FunFacts<br />
+                        Gestaltung der Titelseite<br />
+                        Diagramme und Co mit mehr Interaktivit&auml;t und Animationen mit D3</p>
+                    <p><a href="https://github.com/timvonbis/timvonbis.github.io">Github</a></p>
+                </span>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</script>
+
+</html>

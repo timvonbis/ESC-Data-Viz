@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Tim von Bischopinck</Author>
+  <LastAuthor>Tim von Bischopinck</LastAuthor>
+  <Created>2022-05-30T17:03:21Z</Created>
+  <LastSaved>2022-05-30T17:03:21Z</LastSaved>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>16320</WindowHeight>
+  <WindowWidth>28040</WindowWidth>
+  <WindowTopX>760</WindowTopX>
+  <WindowTopY>4800</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="gender-componisten">
+  <Table ss:ExpandedColumnCount="2" ss:ExpandedRowCount="65" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="16">
+   <Row>
+    <Cell><Data ss:Type="String">Jahr</Data></Cell>
+    <Cell><Data ss:Type="String">Geschlecht</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1956</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1957</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1958</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1959</Data></Cell>
+    <Cell><Data ss:Type="Number">9.1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1960</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1961</Data></Cell>
+    <Cell><Data ss:Type="Number">6.3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1962</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1963</Data></Cell>
+    <Cell><Data ss:Type="Number">12.5</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1964</Data></Cell>
+    <Cell><Data ss:Type="Number">6.3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1965</Data></Cell>
+    <Cell><Data ss:Type="Number">5.6000000000000005</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1966</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1967</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1968</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1969</Data></Cell>
+    <Cell><Data ss:Type="Number">6.3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1970</Data></Cell>
+    <Cell><Data ss:Type="Number">8.3000000000000007</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1971</Data></Cell>
+    <Cell><Data ss:Type="Number">5.6000000000000005</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1972</Data></Cell>
+    <Cell><Data ss:Type="Number">5.6000000000000005</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1973</Data></Cell>
+    <Cell><Data ss:Type="Number">5.8999999999999995</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1974</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1975</Data></Cell>
+    <Cell><Data ss:Type="Number">15.8</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1976</Data></Cell>
+    <Cell><Data ss:Type="Number">11.1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1977</Data></Cell>
+    <Cell><Data ss:Type="Number">5.6000000000000005</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1978</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1979</Data></Cell>
+    <Cell><Data ss:Type="Number">15.8</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1980</Data></Cell>
+    <Cell><Data ss:Type="Number">10.5</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1981</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1982</Data></Cell>
+    <Cell><Data ss:Type="Number">11.1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1983</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1984</Data></Cell>
+    <Cell><Data ss:Type="Number">10.5</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1985</Data></Cell>
+    <Cell><Data ss:Type="Number">21.099999999999998</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1986</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1987</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1988</Data></Cell>
+    <Cell><Data ss:Type="Number">4.8</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1989</Data></Cell>
+    <Cell><Data ss:Type="Number">13.600000000000001</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1990</Data></Cell>
+    <Cell><Data ss:Type="Number">14.299999999999999</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1991</Data></Cell>
+    <Cell><Data ss:Type="Number">4.5</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1992</Data></Cell>
+    <Cell><Data ss:Type="Number">13</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1993</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1994</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1995</Data></Cell>
+    <Cell><Data ss:Type="Number">8.6999999999999993</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1996</Data></Cell>
+    <Cell><Data ss:Type="Number">8.6999999999999993</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1997</Data></Cell>
+    <Cell><Data ss:Type="Number">20</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1998</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">1999</Data></Cell>
+    <Cell><Data ss:Type="Number">13</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2000</Data></Cell>
+    <Cell><Data ss:Type="Number">4.2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2001</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2002</Data></Cell>
+    <Cell><Data ss:Type="Number">25</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2003</Data></Cell>
+    <Cell><Data ss:Type="Number">11.5</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2004</Data></Cell>
+    <Cell><Data ss:Type="Number">8.3000000000000007</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2005</Data></Cell>
+    <Cell><Data ss:Type="Number">7.7</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2006</Data></Cell>
+    <Cell><Data ss:Type="Number">13.5</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2007</Data></Cell>
+    <Cell><Data ss:Type="Number">9.5</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2008</Data></Cell>
+    <Cell><Data ss:Type="Number">11.600000000000001</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2009</Data></Cell>
+    <Cell><Data ss:Type="Number">11.899999999999999</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2010</Data></Cell>
+    <Cell><Data ss:Type="Number">7.7</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2011</Data></Cell>
+    <Cell><Data ss:Type="Number">18.600000000000001</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2012</Data></Cell>
+    <Cell><Data ss:Type="Number">16.7</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2013</Data></Cell>
+    <Cell><Data ss:Type="Number">10.299999999999999</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2014</Data></Cell>
+    <Cell><Data ss:Type="Number">32.4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2015</Data></Cell>
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2016</Data></Cell>
+    <Cell><Data ss:Type="Number">31</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2017</Data></Cell>
+    <Cell><Data ss:Type="Number">12.2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2018</Data></Cell>
+    <Cell><Data ss:Type="Number">23.3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">2019</Data></Cell>
+    <Cell><Data ss:Type="Number">26.8</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.78740157499999996" x:Left="0.7" x:Right="0.7"
+     x:Top="0.78740157499999996"/>
+   </PageSetup>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>12</ActiveRow>
+     <ActiveCol>4</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

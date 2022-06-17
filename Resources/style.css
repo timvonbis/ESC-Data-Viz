@@ -1,0 +1,35 @@
+/* Allgemein */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Mixta-Pro, Georgia, serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+p, text {
+    font-family: Sofia-Pro;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Allgemeine Gestaltung von Diagrammen */
+svg path {
+    fill: none;
+    stroke: grey;
+}
+
+figure.diagramm {
+    width: 70%;
+    max-width: 800px;
+    display: block;
+    background-color: aqua;
+}
+
+g.tick text {
+    font-size: 1.2em;
+    font-weight: 800;
+}

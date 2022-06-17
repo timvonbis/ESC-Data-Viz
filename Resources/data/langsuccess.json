@@ -1,0 +1,346 @@
+[
+  {
+    "Land": "Montenegro",
+    "Punkte": 348,
+    "Teilnahmen": 11,
+    "Platz": 31.64,
+    "Landsprache": 6,
+    "AnteilSprache": 0.55
+  },
+  {
+    "Land": "San Marino",
+    "Punkte": 338,
+    "Teilnahmen": 11,
+    "Platz": 30.73,
+    "Landsprache": 2,
+    "AnteilSprache": 0.18
+  },
+  {
+    "Land": "Belarus",
+    "Punkte": 429,
+    "Teilnahmen": 17,
+    "Platz": 25.24,
+    "Landsprache": 1,
+    "AnteilSprache": 0.06
+  },
+  {
+    "Land": "North Macedonia",
+    "Punkte": 459,
+    "Teilnahmen": 20,
+    "Platz": 22.95,
+    "Landsprache": 10,
+    "AnteilSprache": 0.5
+  },
+  {
+    "Land": "Latvia",
+    "Punkte": 477,
+    "Teilnahmen": 21,
+    "Platz": 22.71,
+    "Landsprache": 1,
+    "AnteilSprache": 0.05
+  },
+  {
+    "Land": "Finland",
+    "Punkte": 584,
+    "Teilnahmen": 26,
+    "Platz": 22.46,
+    "Landsprache": 9,
+    "AnteilSprache": 0.35
+  },
+  {
+    "Land": "Slovenia",
+    "Punkte": 579,
+    "Teilnahmen": 26,
+    "Platz": 22.27,
+    "Landsprache": 16,
+    "AnteilSprache": 0.62
+  },
+  {
+    "Land": "Switzerland",
+    "Punkte": 595,
+    "Teilnahmen": 27,
+    "Platz": 22.04,
+    "Landsprache": 13,
+    "AnteilSprache": 0.48
+  },
+  {
+    "Land": "Lithuania",
+    "Punkte": 451,
+    "Teilnahmen": 21,
+    "Platz": 21.48,
+    "Landsprache": 2,
+    "AnteilSprache": 0.1
+  },
+  {
+    "Land": "Bulgaria",
+    "Punkte": 278,
+    "Teilnahmen": 13,
+    "Platz": 21.38,
+    "Landsprache": 4,
+    "AnteilSprache": 0.31
+  },
+  {
+    "Land": "Albania",
+    "Punkte": 351,
+    "Teilnahmen": 17,
+    "Platz": 20.65,
+    "Landsprache": 6,
+    "AnteilSprache": 0.35
+  },
+  {
+    "Land": "Belgium",
+    "Punkte": 570,
+    "Teilnahmen": 28,
+    "Platz": 20.36,
+    "Landsprache": 9,
+    "AnteilSprache": 0.32
+  },
+  {
+    "Land": "Portugal",
+    "Punkte": 546,
+    "Teilnahmen": 27,
+    "Platz": 20.22,
+    "Landsprache": 25,
+    "AnteilSprache": 0.93
+  },
+  {
+    "Land": "Poland",
+    "Punkte": 455,
+    "Teilnahmen": 23,
+    "Platz": 19.78,
+    "Landsprache": 11,
+    "AnteilSprache": 0.48
+  },
+  {
+    "Land": "Georgia",
+    "Punkte": 256,
+    "Teilnahmen": 13,
+    "Platz": 19.69,
+    "Landsprache": 2,
+    "AnteilSprache": 0.15
+  },
+  {
+    "Land": "Netherlands",
+    "Punkte": 520,
+    "Teilnahmen": 28,
+    "Platz": 18.57,
+    "Landsprache": 8,
+    "AnteilSprache": 0.29
+  },
+  {
+    "Land": "Hungary",
+    "Punkte": 315,
+    "Teilnahmen": 17,
+    "Platz": 18.53,
+    "Landsprache": 9,
+    "AnteilSprache": 0.53
+  },
+  {
+    "Land": "Estonia",
+    "Punkte": 478,
+    "Teilnahmen": 26,
+    "Platz": 18.38,
+    "Landsprache": 8,
+    "AnteilSprache": 0.31
+  },
+  {
+    "Land": "Austria",
+    "Punkte": 456,
+    "Teilnahmen": 25,
+    "Platz": 18.24,
+    "Landsprache": 11,
+    "AnteilSprache": 0.44
+  },
+  {
+    "Land": "Moldova",
+    "Punkte": 285,
+    "Teilnahmen": 16,
+    "Platz": 17.81,
+    "Landsprache": 2,
+    "AnteilSprache": 0.13
+  },
+  {
+    "Land": "Iceland",
+    "Punkte": 513,
+    "Teilnahmen": 29,
+    "Platz": 17.69,
+    "Landsprache": 10,
+    "AnteilSprache": 0.34
+  },
+  {
+    "Land": "Cyprus",
+    "Punkte": 507,
+    "Teilnahmen": 29,
+    "Platz": 17.48,
+    "Landsprache": 14,
+    "AnteilSprache": 0.48
+  },
+  {
+    "Land": "Croatia",
+    "Punkte": 452,
+    "Teilnahmen": 26,
+    "Platz": 17.38,
+    "Landsprache": 18,
+    "AnteilSprache": 0.69
+  },
+  {
+    "Land": "Israel",
+    "Punkte": 471,
+    "Teilnahmen": 28,
+    "Platz": 16.82,
+    "Landsprache": 11,
+    "AnteilSprache": 0.39
+  },
+  {
+    "Land": "Ireland",
+    "Punkte": 504,
+    "Teilnahmen": 30,
+    "Platz": 16.8,
+    "Landsprache": 30,
+    "AnteilSprache": 1
+  },
+  {
+    "Land": "Malta",
+    "Punkte": 470,
+    "Teilnahmen": 30,
+    "Platz": 15.67,
+    "Landsprache": 30,
+    "AnteilSprache": 1
+  },
+  {
+    "Land": "Spain",
+    "Punkte": 467,
+    "Teilnahmen": 31,
+    "Platz": 15.06,
+    "Landsprache": 28,
+    "AnteilSprache": 0.9
+  },
+  {
+    "Land": "Germany",
+    "Punkte": 433,
+    "Teilnahmen": 30,
+    "Platz": 14.43,
+    "Landsprache": 12,
+    "AnteilSprache": 0.4
+  },
+  {
+    "Land": "Denmark",
+    "Punkte": 386,
+    "Teilnahmen": 27,
+    "Platz": 14.3,
+    "Landsprache": 6,
+    "AnteilSprache": 0.22
+  },
+  {
+    "Land": "United Kingdom",
+    "Punkte": 442,
+    "Teilnahmen": 31,
+    "Platz": 14.26,
+    "Landsprache": 31,
+    "AnteilSprache": 1
+  },
+  {
+    "Land": "Armenia",
+    "Punkte": 199,
+    "Teilnahmen": 14,
+    "Platz": 14.21,
+    "Landsprache": 1,
+    "AnteilSprache": 0.07
+  },
+  {
+    "Land": "Serbia",
+    "Punkte": 183,
+    "Teilnahmen": 13,
+    "Platz": 14.08,
+    "Landsprache": 9,
+    "AnteilSprache": 0.69
+  },
+  {
+    "Land": "Romania",
+    "Punkte": 294,
+    "Teilnahmen": 21,
+    "Platz": 14,
+    "Landsprache": 4,
+    "AnteilSprache": 0.19
+  },
+  {
+    "Land": "Bosnia & Herzegovina",
+    "Punkte": 264,
+    "Teilnahmen": 19,
+    "Platz": 13.89,
+    "Landsprache": 14,
+    "AnteilSprache": 0.74
+  },
+  {
+    "Land": "France",
+    "Punkte": 425,
+    "Teilnahmen": 31,
+    "Platz": 13.71,
+    "Landsprache": 25,
+    "AnteilSprache": 0.81
+  },
+  {
+    "Land": "Norway",
+    "Punkte": 404,
+    "Teilnahmen": 30,
+    "Platz": 13.47,
+    "Landsprache": 10,
+    "AnteilSprache": 0.33
+  },
+  {
+    "Land": "Greece",
+    "Punkte": 374,
+    "Teilnahmen": 29,
+    "Platz": 12.9,
+    "Landsprache": 12,
+    "AnteilSprache": 0.41
+  },
+  {
+    "Land": "Turkey",
+    "Punkte": 249,
+    "Teilnahmen": 22,
+    "Platz": 11.32,
+    "Landsprache": 15,
+    "AnteilSprache": 0.68
+  },
+  {
+    "Land": "Azerbaijan",
+    "Punkte": 126,
+    "Teilnahmen": 13,
+    "Platz": 9.69,
+    "Landsprache": "",
+    "AnteilSprache": 0
+  },
+  {
+    "Land": "Sweden",
+    "Punkte": 271,
+    "Teilnahmen": 31,
+    "Platz": 8.74,
+    "Landsprache": 9,
+    "AnteilSprache": 0.29
+  },
+  {
+    "Land": "Ukraine",
+    "Punkte": 137,
+    "Teilnahmen": 16,
+    "Platz": 8.56,
+    "Landsprache": 3,
+    "AnteilSprache": 0.19
+  },
+  {
+    "Land": "Russia",
+    "Punkte": 196,
+    "Teilnahmen": 23,
+    "Platz": 8.52,
+    "Landsprache": 6,
+    "AnteilSprache": 0.26
+  },
+  {
+    "Land": "Italy",
+    "Punkte": 99,
+    "Teilnahmen": 15,
+    "Platz": 6.6,
+    "Landsprache": 13,
+    "AnteilSprache": 0.87
+  }
+]
