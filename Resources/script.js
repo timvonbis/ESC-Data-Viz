@@ -1,7 +1,4 @@
-
-
-/* Balkendiagramm Komponisten & Gender */
-
+//#region Balkendiagramm Komponisten & Gender 
 d3.json("./Resources/data/csvjson.json", function (data) {
 
     let svgGender = d3.select("svg.compgender"),
@@ -84,7 +81,8 @@ d3.json("./Resources/data/csvjson.json", function (data) {
 
 });
 
-/* Scatterplot Sprache, Länder, Punkte & Zeitverlauf */
+//#endregion
+//#region Häufigkeit SPrachen 
 
 d3.json("./Resources/data/sprache-alle.json", function (data) {
 
@@ -194,8 +192,8 @@ d3.json("./Resources/data/sprache-alle.json", function (data) {
 
 
 });
-
-/* Sprachanteil/Erfolg: Bubble Diagram */
+//#endregion
+//#region Sprachanteil/Erfolg: Bubble Diagram
 d3.json("./Resources/data/langsuccess.json", function (data) {
 
     let widthInput = 800;
@@ -257,5 +255,6 @@ d3.json("./Resources/data/langsuccess.json", function (data) {
         .style("fill", "red");
 });
 
-
-//Scroll-Zeug
+//#endregion
+//#region Scroll-Zeug
+//#endregion
