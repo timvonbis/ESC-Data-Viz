@@ -1,7 +1,11 @@
-/* Allgemein */
+/* #region Allgemein */
+
 * {
     margin: 0;
     padding: 0;
+}
+body,html {
+    margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -15,8 +19,8 @@ p, text {
     font-weight: 500;
     font-style: normal;
 }
-
-/* Allgemeine Gestaltung von Diagrammen */
+/* #endregion */
+/* #region Allgemeine Gestaltung von Diagrammen */
 svg path {
     fill: none;
     stroke: grey;
@@ -26,10 +30,94 @@ figure.diagramm {
     width: 70%;
     max-width: 800px;
     display: block;
-    background-color: aqua;
+    background-color: white;
 }
 
 g.tick text {
     font-size: 1.2em;
     font-weight: 800;
 }
+/* #endregion */
+/* #region Splash-Screen */
+section.panel.splash {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+}
+/* #endregion */
+/* #region Video-Titel */
+section.panel.video {
+    width: 100vw;
+    height: calc(100vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    overflow: hidden;
+}
+
+section.panel.video video{
+    object-fit: cover;
+    width: 100%;
+    height: calc(100% + 105px);
+
+}
+section.panel.video div.video-title{
+    position: absolute;
+}
+section.panel.video div.video-title {
+    font-size: 3em;
+    color: whitesmoke;
+}
+/* #endregion */
+/* #region normale Panel*/
+section.diagramm.language {
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    max-height: 100vh;
+    background-color: grey;
+    overflow:hidden;
+    display: flex;
+    margin: 0px auto; 
+
+}
+section.diagramm div.object{
+    width: 70%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+}
+figure.diagramm {
+    width: 100%;
+    min-width: 250px;
+
+
+}
+section.diagramm div.side{
+    width: 30%;
+    min-width: 200px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: block;
+    max-width: 300px;
+    height: 300vh;
+
+}
+
+section.diagramm div.side div.fact {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+
+/* #endregion */

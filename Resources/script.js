@@ -190,6 +190,16 @@ d3.json("./Resources/data/sprache-alle.json", function (data) {
         .attr("class", "axis")
         .call(yScaleTicks);
 
+    //Interaktiv
+let langEnter = function(d){
+        d3.select("path.lang.en")
+        .style("stroke", "green");
+        console.log("test");
+
+    };
+
+    console.log("test2");
+
 
 });
 //#endregion
@@ -257,4 +267,98 @@ d3.json("./Resources/data/langsuccess.json", function (data) {
 
 //#endregion
 //#region Scroll-Zeug
+let langEnter = function(d){
+    d3.select("path.lang.en")
+    .transition()
+    .duration(100)
+    .style("stroke", "blue")
+    .style("stroke-width", "4px")
+
+};
+let langLeave = function(d){
+    d3.select("path.lang.en")
+    .transition()
+    .duration(100)
+    .style("stroke", "grey")
+    .style("stroke-width", "1px")
+
+};
+
+ScrollTrigger.create({
+    trigger: "#video-lang",
+    start: "top top", 
+    end: "bottom px",
+    pin: "#video-lang",
+    markers: false,
+    
+  });
+
+gsap.from("#title-lang", {
+    y: 30,
+    opacity: 0.0, 
+    scrollTrigger: {
+    trigger:    "#video-lang",
+    start: "top top",
+    end: "+=300",
+    scrub: 0.3,
+    markers: false,
+}
+    });
+    gsap.to("#video-test", {
+        y: -50,
+        opacity: 0.6, 
+        scrollTrigger: {
+        trigger:    "#video-lang",
+        start: "top top",
+        end: "+=300",
+        scrub: true,
+        markers: false
+
+    }
+        });
+        ScrollTrigger.create({
+            trigger: "section.diagramm div.side",
+            start: "top top",
+            end: "bottom bottom",
+            pin:"section.diagramm.language",
+            markers: true,
+
+          });
+          gsap.to("div.side", {
+            transform: 'translateY(-250vh)',
+            scrollTrigger: {
+                scrub: true,
+                trigger: "section.diagramm.language",
+                start: "top top",
+                end: "+=300%",
+
+            }
+          })
+
+
+          ScrollTrigger.create({
+            trigger: "div.fact.zwei.lang",
+            start: "top center",
+            end: "bottom center",
+            onEnter: langEnter,
+            onLeave: langLeave,
+            onEnterBack: langEnter,
+            onLeaveBack: langLeave
+          });
+
+
+
+ScrollTrigger.create({
+    trigger: "#langsuccess",
+    pin: "#langsuccess",
+    start: "top center",
+    end: "top bottom",
+    markers: false,
+  });
+
+
+
+  //Video-tile
+
+
 //#endregion
