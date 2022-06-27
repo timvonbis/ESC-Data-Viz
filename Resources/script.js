@@ -307,11 +307,12 @@ let tl = gsap.timeline({
 tl.to("#buhne", { opacity: 1, duration: 2, ease: Power4.easeout, }, "buhne")
 tl.to("#fragez", { opacity: 1, duration: 1, y: -30, ease: Power4.easeout, }, "fragez")
 tl.to("#buhne", { opacity: 0.8, duration: 0.5, delay: 4 }, "fragedz")
-tl.to("#titeleins", { opacity: 1, duration: 0.5 }, "titel")
+tl.to("#titeleins", { opacity: 1, duration: 0.5 }, "titel2")
 tl.to("#buhne", { opacity: 0.3, duration: 0.5 }, "titel")
 tl.to("#fragez", { opacity: 0.3, duration: 0.5, delay: 2 }, "titel")
-tl.to("#titeleins", { opacity: 0, duration: 0.5, delay: 5 }, "titelzwei")
-tl.to("#titelzwei", { opacity: 1, duration: 0.5, delay: 5 }, "titelzwei")
+tl.to("#titeleins", { y: -30, ease: Power1.easeout, duration: 0.5 }, "titel3")
+tl.to("#titeleins", { opacity: 0, duration: 0.5,  }, "titelzwei")
+tl.to("#titelzwei", { opacity: 1, duration: 0.5,  }, "titelzwei")
 
 
 //#endregion
@@ -441,7 +442,7 @@ ScrollTrigger.create({
     onLeave: langLeaveEins,
     onEnterBack: langEnterEins,
     onLeaveBack: langLeaveEins,
-    markers: true,
+    markers: false,
 });
 
 ScrollTrigger.create({
@@ -461,7 +462,7 @@ ScrollTrigger.create({
     onLeave: langLeaveDrei,
     onEnterBack: langEnterDrei,
     onLeaveBack: langLeaveDrei,
-    markers: true
+    markers: false
 });
 
 
