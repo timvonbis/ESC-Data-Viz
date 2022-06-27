@@ -12,15 +12,23 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Mixta-Pro, Georgia, serif;
     font-weight: 700;
     font-style: normal;
+    color:white;
 }
 
 p, text {
     font-family: Sofia-Pro;
     font-weight: 500;
     font-style: normal;
+    color: white;
 }
 /* #endregion */
 /* #region Allgemeine Gestaltung von Diagrammen */
+h3{
+    font-size: 1.6em;
+    line-height: 120%;
+    padding-bottom: 10px;
+}
+
 svg path {
     fill: none;
     stroke: grey;
@@ -30,13 +38,26 @@ figure.diagramm {
     width: 70%;
     max-width: 800px;
     display: block;
-    background-color: white;
+
 }
 
 g.tick text {
     font-size: 1.2em;
     font-weight: 800;
+    fill: white;
 }
+
+g.tick line {
+    stroke: grey;
+}
+
+.tooltip {
+    background-color: lightgray;
+
+
+}
+
+
 /* #endregion */
 /* #region Splash-Screen */
 section.panel.splash {
@@ -44,8 +65,50 @@ section.panel.splash {
     height: 100vh;
     width: 100vw;
     position: relative;
+}
+
+div.bgpic {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0.5;
 
 }
+
+div.bgpic#buhne {
+background-image: url(/Resources/img/bg/esc-buhne.jpg);
+background-position: center center;
+background-size: cover;
+opacity: 0;
+}
+div.bgpic#fragez {
+    background-image: url(/Resources/img/bg/Hintergrund-Titel-Frage.png);
+    background-position: center center;
+    background-size: cover;
+    opacity: 0;
+    }
+
+div.bgpic#titeleins {
+    opacity: 0;
+}
+div.bgpic#titelzwei {
+    opacity: 0;
+}
+div.bgpic h1{
+    font-size: 3em;
+    color: white;
+    max-width: 500px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+
+
+
 /* #endregion */
 /* #region Video-Titel */
 section.panel.video {
@@ -73,15 +136,17 @@ section.panel.video div.video-title {
 }
 /* #endregion */
 /* #region normale Panel*/
-section.diagramm.language {
+
+section.diagramm {
     width: 100%;
     max-width: 1200px;
     height: 100vh;
     max-height: 100vh;
-    background-color: grey;
+    background-color: purple;
     overflow:hidden;
     display: flex;
     margin: 0px auto; 
+    background-size: cover;
 
 }
 section.diagramm div.object{
@@ -106,18 +171,36 @@ section.diagramm div.side{
     padding: 10px;
     display: block;
     max-width: 300px;
-    height: 300vh;
+    height: max-content;
 
 }
 
 section.diagramm div.side div.fact {
     height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     flex-direction: column;
-
+    align-content:left;
 
 }
 
+/* #endregion */
+/* #region Sprachen Diagramm */
+section.diagramm.language {
+    background-image: url(/Resources/img/bg/lila-2.svg);
+}
+section.diagramm.langsuccess {
+    background-image: url(/Resources/img/bg/lila-3.svg);
+}
+
+strong.de {
+ color: gold;
+}
+strong.it {
+ color: green;
+}
+strong.fr {
+ color: red;
+}
 /* #endregion */

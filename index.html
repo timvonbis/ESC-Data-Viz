@@ -23,8 +23,14 @@
 <body>
     <div class="main">
         <section class="panel splash">
-            <h1>Der Eurovision Song Contest in Daten</h1>
-            <h1>Oder: Der perfekte Eurovision-Song</h1>
+            <div class="bgpic" id="buhne">
+            </div>
+            <div class="bgpic" id="fragez"></div>
+            <div class="bgpic" id="titeleins">
+                <h1>Der perfekte Eurovision-Song</h1>
+            </div>
+            <div class="bgpic" id="titelzwei">
+            <h1>Oder: Der ESC in Daten</h1></div>
 
         </section>
         <section class="panel video" id="video-lang">
@@ -35,7 +41,7 @@
                 <h2>Sprache der Texte</h2>
             </div>
         </section>
-        <section class="panel normal">
+  <!---     <section class="panel normal">
             <div class="facts-container">
                 <div class="fact">
                     <span class="text">
@@ -64,7 +70,7 @@
                         </p>
                     </span>
 
-        </section>
+        </section> -->
 
         <section class="diagramm language">
             <div class="object">
@@ -72,51 +78,82 @@
                 </figure>
             </div>
             <div class="side">
-                <div class="fact eins lang">
+                <div class="fact null lang">
                     <h3>
                         Anzahl ESC-Beitr&aumlge nach Sprache
                     </h3>
+                </div>
+                <div class="fact eins lang">
+                    <h3>
+                        Regeln zur Sprache
+                    </h3>
                     <span>
-                        <p>Vor 1990 war es im ESC absolut &uuml;blich in den Landessprachen zu singen.</p>
+                        <p>Vor 1990 war es im ESC absolut &uuml;blich in den Landessprachen zu singen. In den Jahren
+                            1966 bis 1972 und 1977 bis 1982 durfte nur mit Songs in Landessprache angetreten werden. Von
+                            83 bis 99 mussten wesentliche Teile des Songs in der Landessprache sein.</p>
                     </span>
                 </div>
                 <div class="fact zwei lang">
                     <h3>
-                        Anzahl ESC-Beitr&aumlge nach Sprache
+                        Der Trend zu Englisch
                     </h3>
                     <span>
-                        <p>Vor 1990 war es im ESC absolut &uuml;blich in den Landessprachen zu singen. <br>Hier soll etwas passieren.</p>
+                        <p>Nach 1990 werde immer mehr Songs statt in der Landessprache in Englisch performt, der bei
+                            weiten am meisten genutzte Sprache im ESC.</p>
                     </span>
                 </div>
                 <div class="fact drei lang">
                     <h3>
-                        Anzahl ESC-Beitr&aumlge nach Sprache
+                        Anderen h&auml;ufige Sprachen
                     </h3>
                     <span>
-                        <p>Vor 1990 war es im ESC absolut &uuml;blich in den Landessprachen zu singen.</p>
+                        <p>W&auml;hrend vor 1990 die Sprachen <strong class="de">Deutsch</strong>, <strong class="fr">Franz&ouml;sisch</strong> und <strong class="it">Italienisch</strong> als h&auml;ufige Landessprachen oft benutzt wurden, sinkt ihr H&auml;ufigkeit sp&auml;ter.</p>
                     </span>
                 </div>
             </div>
         </section>
 
-        <section class="panel drei">
-            <div class="sectionHeader">
-                <h3>
-                    Erfolg ESC-Beitr&aumlge nach Sprache
-                </h3>
-            </div>
-            <div class="sectionBody">
+        <section class="diagramm langsuccess">
+
+            <div class="object">
                 <figure id="langsuccess" class="diagramm">
                 </figure>
-                <span class="text">
-                    <h4>Fantasiesprachen</h4>
-                    <p>
-                        Immer wieder texten L&auml;nder Ausschnitte von Liedern in Fantasiesprachen. Aber nur
-                        Belgien ist gleich zweimal (2008 und 2003) mit Liedern aus komplett konstruierter Sprache
-                        angetreten.
-                    </p>
-                </span>
             </div>
+            <div class="side">
+        <div class="fact null langsucc">
+
+                    <span>
+
+                    </span>
+                </div>
+                <div class="fact eins langsucc">
+                    <h3>
+                        Regeln zur Sprache
+                    </h3>
+                    <span>
+                        
+                    </span>
+                </div>
+                <div class="fact zwei langsucc">
+                    <h3>
+                        Der Trend zu Englisch
+                    </h3>
+                    <span>
+                        <p>Nach 1990 werde immer mehr Songs statt in der Landessprache in Englisch performt, der bei
+                            weiten am meisten genutzte Sprache im ESC.</p>
+                    </span>
+                </div>
+                <div class="fact drei langsucc">
+                    <h3>
+                        Anderen h&auml;ufige Sprachen
+                    </h3>
+                    <span>
+                        <p>W&auml;hrend vor 1990 die Sprachen <strong class="de">Deutsch</strong>, <strong class="fr">Franz&ouml;sisch</strong> und <strong class="it">Italienisch</strong> als h&auml;ufige Landessprachen oft benutzt wurden, sinkt ihr H&auml;ufigkeit sp&auml;ter.</p>
+                    </span>
+                </div> 
+            </div>
+              
+
         </section>
 
         <section class="panel video" id="video-comp">
@@ -137,7 +174,7 @@
             </div>
             <div class="sectionBody">
                 <figure id="gender" class="diagramm">
-                    <svg class="compgender" width="800" height="400">
+                    <svg class="compgender" width="300" height="400">
                     </svg>
                 </figure>
             </div>

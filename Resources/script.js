@@ -126,7 +126,8 @@ d3.json("./Resources/data/sprache-alle.json", function (data) {
         .attr("y", 0)
         .attr("height", height)
         .attr("width", breite)
-        .attr("fill", "lightgrey");
+        .attr("fill", "lightgrey")
+        .attr("opacity", "0.2");
 
     //Bereich 2
     anfang = 1977;
@@ -139,7 +140,8 @@ d3.json("./Resources/data/sprache-alle.json", function (data) {
         .attr("y", 0)
         .attr("height", height)
         .attr("width", breite)
-        .attr("fill", "lightgrey");
+        .attr("fill", "lightgrey")
+        .attr("opacity", "0.2");
 
 
     //Linie
@@ -191,9 +193,9 @@ d3.json("./Resources/data/sprache-alle.json", function (data) {
         .call(yScaleTicks);
 
     //Interaktiv
-let langEnter = function(d){
+    let langEnter = function (d) {
         d3.select("path.lang.en")
-        .style("stroke", "green");
+            .style("stroke", "green");
         console.log("test");
 
     };
@@ -254,107 +256,216 @@ d3.json("./Resources/data/langsuccess.json", function (data) {
         .attr("class", "axis")
         .call(yScaleTicks);
 
+    let tooltip = d3.select("div.fact.null.langsucc span")
+        .append("p")
+        .style("opacity", 0)
+        .attr("class", "fact null langsucc");
+
+    let mouseover = function (d) {
+        tooltip
+            .style("opacity", 1)
+    }
+    let mousemove = function(d) {
+        tooltip
+          .html(d.Land + "<br>Anteil der Songs in Landessprache:<br>" + d.AnteilSprache +"<br>Durchschnittlicher Platz:<br>" +d.Platz)
+      }
+    
+      var mouseleave = function(d) {
+        tooltip
+          .transition()
+          .duration(50)
+          .style("opacity", 0)
+      }
+
     //Kreise
     svg.selectAll(".kreise")
         .data(data)
         .enter()
         .append("circle")
-        .attr("cx", function(d){return xScale(d.Platz);})
-        .attr("cy", function(d){return yScale(d.AnteilSprache);})
-        .attr("r", "7")
-        .style("fill", "red");
+        .attr("cx", function (d) { return xScale(d.Platz); })
+        .attr("cy", function (d) { return yScale(d.AnteilSprache); })
+        .attr("r", "8")
+        .style("fill", "white")
+        .attr("opacity", "0.8")
+        .on("mouseover", mouseover)
+        .on("mousemove", mousemove)
+        .on("mouseleave", mouseleave)
 });
 
 //#endregion
+//#region Splash-Screen Animation
+
+let tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".panel.splash",
+        pin: true,
+        start: "top top",
+        end: "+=1200",
+        scrub: "0.5"
+    }
+});
+tl.to("#buhne", { opacity: 1, duration: 2, ease: Power4.easeout, }, "buhne")
+tl.to("#fragez", { opacity: 1, duration: 1, y: -30, ease: Power4.easeout, }, "fragez")
+tl.to("#buhne", { opacity: 0.8, duration: 0.5, delay: 4 }, "fragedz")
+tl.to("#titeleins", { opacity: 1, duration: 0.5 }, "titel")
+tl.to("#buhne", { opacity: 0.3, duration: 0.5 }, "titel")
+tl.to("#fragez", { opacity: 0.3, duration: 0.5, delay: 2 }, "titel")
+tl.to("#titeleins", { opacity: 0, duration: 0.5, delay: 5 }, "titelzwei")
+tl.to("#titelzwei", { opacity: 1, duration: 0.5, delay: 5 }, "titelzwei")
+
+
+//#endregion
 //#region Scroll-Zeug
-let langEnter = function(d){
-    d3.select("path.lang.en")
-    .transition()
-    .duration(100)
-    .style("stroke", "blue")
-    .style("stroke-width", "4px")
+
+let langEnterDrei = function (d) {
+    d3.select("path.lang.de")
+        .transition()
+        .duration(100)
+        .style("stroke", "gold")
+        .style("stroke-width", "2px")
+    d3.select("path.lang.fr")
+        .transition()
+        .duration(100)
+        .style("stroke", "red")
+        .style("stroke-width", "2px")
+    d3.select("path.lang.it")
+        .transition()
+        .duration(300)
+        .style("stroke", "green")
+        .style("stroke-width", "2px")
+};
+
+let langLeaveDrei = function (d) {
+    d3.selectAll("path.lang")
+        .transition()
+        .duration(300)
+        .style("stroke", "grey")
+        .style("stroke-width", "1px")
 
 };
-let langLeave = function(d){
+
+let langEnterZwei = function (d) {
     d3.select("path.lang.en")
-    .transition()
-    .duration(100)
-    .style("stroke", "grey")
-    .style("stroke-width", "1px")
+        .transition()
+        .duration(300)
+        .style("stroke", "blue")
+        .style("stroke-width", "4px")
 
 };
+
+let langLeaveZwei = function (d) {
+    d3.select("path.lang.en")
+        .transition()
+        .duration(300)
+        .style("stroke", "grey")
+        .style("stroke-width", "1px")
+
+};
+let langEnterEins = function (d) {
+    console.log("zweifunzt")
+    d3.selectAll("rect.lang-allowed")
+        .transition()
+        .duration(300)
+        .style("fill", "white")
+        .style("opacity", "0.9")
+
+
+};
+
+let langLeaveEins = function (d) {
+    d3.selectAll("rect.lang-allowed")
+        .transition()
+        .duration(300)
+        .style("fill", "lightgrey")
+        .style("opacity", "0.2")
+
+};
+
 
 ScrollTrigger.create({
     trigger: "#video-lang",
-    start: "top top", 
+    start: "top top",
     end: "bottom px",
     pin: "#video-lang",
     markers: false,
-    
-  });
+
+});
 
 gsap.from("#title-lang", {
     y: 30,
-    opacity: 0.0, 
+    opacity: 0.0,
     scrollTrigger: {
-    trigger:    "#video-lang",
-    start: "top top",
-    end: "+=300",
-    scrub: 0.3,
-    markers: false,
-}
-    });
-    gsap.to("#video-test", {
-        y: -50,
-        opacity: 0.6, 
-        scrollTrigger: {
-        trigger:    "#video-lang",
+        trigger: "#video-lang",
+        start: "top top",
+        end: "+=300",
+        scrub: 0.3,
+        markers: false,
+    }
+});
+gsap.to("#video-test", {
+    y: -50,
+    opacity: 0.6,
+    scrollTrigger: {
+        trigger: "#video-lang",
         start: "top top",
         end: "+=300",
         scrub: true,
         markers: false
 
     }
-        });
-        ScrollTrigger.create({
-            trigger: "section.diagramm div.side",
-            start: "top top",
-            end: "bottom bottom",
-            pin:"section.diagramm.language",
-            markers: true,
+});
+ScrollTrigger.create({
+    trigger: "section.diagramm.language div.side",
+    start: "top top",
+    end: "bottom center",
+    pin: "section.diagramm.language",
+    markers: false,
 
-          });
-          gsap.to("div.side", {
-            transform: 'translateY(-250vh)',
-            scrollTrigger: {
-                scrub: true,
-                trigger: "section.diagramm.language",
-                start: "top top",
-                end: "+=300%",
+});
+gsap.to("section.diagramm.language div.side", {
+    transform: 'translateY(-400vh)',
+    scrollTrigger: {
+        scrub: true,
+        trigger: "section.diagramm.language",
+        start: "top top",
+        end: "+=700%",
 
-            }
-          })
-
-
-          ScrollTrigger.create({
-            trigger: "div.fact.zwei.lang",
-            start: "top center",
-            end: "bottom center",
-            onEnter: langEnter,
-            onLeave: langLeave,
-            onEnterBack: langEnter,
-            onLeaveBack: langLeave
-          });
-
-
+    }
+})
 
 ScrollTrigger.create({
-    trigger: "#langsuccess",
-    pin: "#langsuccess",
-    start: "top center",
-    end: "top bottom",
-    markers: false,
-  });
+    trigger: "div.fact.eins.lang",
+    start: "top 20%",
+    end: "bottom 70%",
+    onEnter: langEnterEins,
+    onLeave: langLeaveEins,
+    onEnterBack: langEnterEins,
+    onLeaveBack: langLeaveEins,
+    markers: true,
+});
+
+ScrollTrigger.create({
+    trigger: "div.fact.zwei.lang",
+    start: "top 20%",
+    end: "bottom 70%",
+    onEnter: langEnterZwei,
+    onLeave: langLeaveZwei,
+    onEnterBack: langEnterZwei,
+    onLeaveBack: langLeaveZwei
+});
+ScrollTrigger.create({
+    trigger: "div.fact.drei.lang",
+    start: "top 20%",
+    end: "bottom top",
+    onEnter: langEnterDrei,
+    onLeave: langLeaveDrei,
+    onEnterBack: langEnterDrei,
+    onLeaveBack: langLeaveDrei,
+    markers: true
+});
+
+
+
 
 
 
