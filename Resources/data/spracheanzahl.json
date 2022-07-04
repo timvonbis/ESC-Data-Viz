@@ -1,0 +1,254 @@
+[
+  {
+    "Sprache": "Französisch",
+    "Kurz": "fr",
+    "Anzahl": 44,
+    "Platz": 17.8837209
+  },
+  {
+    "Sprache": "Amharisch",
+    "Kurz": "am",
+    "Anzahl": 1,
+    "Platz": 35
+  },
+  {
+    "Sprache": "Bulgarisch",
+    "Kurz": "bg",
+    "Anzahl": 4,
+    "Platz": 23
+  },
+  {
+    "Sprache": "Bretonisch",
+    "Kurz": "br",
+    "Anzahl": 1,
+    "Platz": 19
+  },
+  {
+    "Sprache": "Bosnisch",
+    "Kurz": "bs",
+    "Anzahl": 2,
+    "Platz": 9.5
+  },
+  {
+    "Sprache": "Catalan",
+    "Kurz": "ca",
+    "Anzahl": 3,
+    "Platz": 35.3333333
+  },
+  {
+    "Sprache": "Corsisch",
+    "Kurz": "co",
+    "Anzahl": 3,
+    "Platz": 8.66666667
+  },
+  {
+    "Sprache": "Tschechisch",
+    "Kurz": "cs",
+    "Anzahl": 1,
+    "Platz": 42
+  },
+  {
+    "Sprache": "Dänisch",
+    "Kurz": "da",
+    "Anzahl": 5,
+    "Platz": 14.8
+  },
+  {
+    "Sprache": "Deutsch",
+    "Kurz": "de",
+    "Anzahl": 22,
+    "Platz": 15.4090909
+  },
+  {
+    "Sprache": "Griechisch",
+    "Kurz": "el",
+    "Anzahl": 24,
+    "Platz": 16.0833333
+  },
+  {
+    "Sprache": "Englisch",
+    "Kurz": "en",
+    "Anzahl": 599,
+    "Platz": 18.64903
+  },
+  {
+    "Sprache": "Spanisch",
+    "Kurz": "es",
+    "Anzahl": 29,
+    "Platz": 16.1071429
+  },
+  {
+    "Sprache": "Estnisch",
+    "Kurz": "et",
+    "Anzahl": 8,
+    "Platz": 13.25
+  },
+  {
+    "Sprache": "Finnisch",
+    "Kurz": "fi",
+    "Anzahl": 9,
+    "Platz": 23
+  },
+  {
+    "Sprache": "Hebräisch",
+    "Kurz": "he",
+    "Anzahl": 10,
+    "Platz": 13.6
+  },
+  {
+    "Sprache": "Kroatisch",
+    "Kurz": "hr",
+    "Anzahl": 37,
+    "Platz": 16.5277778
+  },
+  {
+    "Sprache": "Haitianisch",
+    "Kurz": "ht",
+    "Anzahl": 1,
+    "Platz": 8
+  },
+  {
+    "Sprache": "Ungarisch",
+    "Kurz": "hu",
+    "Anzahl": 9,
+    "Platz": 15.5555556
+  },
+  {
+    "Sprache": "Imaginär",
+    "Kurz": "imagine",
+    "Anzahl": 2,
+    "Platz": 20.5
+  },
+  {
+    "Sprache": "Isländisch",
+    "Kurz": "is",
+    "Anzahl": 9,
+    "Platz": 13.5555556
+  },
+  {
+    "Sprache": "Italienisch",
+    "Kurz": "it",
+    "Anzahl": 23,
+    "Platz": 13.0909091
+  },
+  {
+    "Sprache": "Georgisch",
+    "Kurz": "ka",
+    "Anzahl": 2,
+    "Platz": 37
+  },
+  {
+    "Sprache": "Kurdisch",
+    "Kurz": "ku",
+    "Anzahl": 1,
+    "Platz": 4
+  },
+  {
+    "Sprache": "Luxemburgisch",
+    "Kurz": "lb",
+    "Anzahl": 1,
+    "Platz": 21
+  },
+  {
+    "Sprache": "Litauisch",
+    "Kurz": "lt",
+    "Anzahl": 2,
+    "Platz": 22.5
+  },
+  {
+    "Sprache": "Lettisch",
+    "Kurz": "lv",
+    "Anzahl": 1,
+    "Platz": 31
+  },
+  {
+    "Sprache": "Montenegrinisch",
+    "Kurz": "me",
+    "Anzahl": 5,
+    "Platz": 27.4
+  },
+  {
+    "Sprache": "Macedonisch",
+    "Kurz": "mk",
+    "Anzahl": 10,
+    "Platz": 24
+  },
+  {
+    "Sprache": "Niederländisch",
+    "Kurz": "nl",
+    "Anzahl": 10,
+    "Platz": 16.2
+  },
+  {
+    "Sprache": "Norwegisch",
+    "Kurz": "no",
+    "Anzahl": 9,
+    "Platz": 10.5555556
+  },
+  {
+    "Sprache": "Polnisch",
+    "Kurz": "pl",
+    "Anzahl": 12,
+    "Platz": 17.6666667
+  },
+  {
+    "Sprache": "Portugiesisch",
+    "Kurz": "pt",
+    "Anzahl": 24,
+    "Platz": 20.0869565
+  },
+  {
+    "Sprache": "Rumänisch",
+    "Kurz": "ro",
+    "Anzahl": 6,
+    "Platz": 17.1666667
+  },
+  {
+    "Sprache": "Russisch",
+    "Kurz": "ru",
+    "Anzahl": 8,
+    "Platz": 18.7142857
+  },
+  {
+    "Sprache": "Slowakisch",
+    "Kurz": "sk",
+    "Anzahl": 5,
+    "Platz": 26.2
+  },
+  {
+    "Sprache": "Slovenisch",
+    "Kurz": "sl",
+    "Anzahl": 16,
+    "Platz": 22.2666667
+  },
+  {
+    "Sprache": "Albanisch",
+    "Kurz": "sq",
+    "Anzahl": 6,
+    "Platz": 18.6666667
+  },
+  {
+    "Sprache": "Serbisch",
+    "Kurz": "sr",
+    "Anzahl": 9,
+    "Platz": 15.125
+  },
+  {
+    "Sprache": "Schwedisch",
+    "Kurz": "sv",
+    "Anzahl": 9,
+    "Platz": 11.4444444
+  },
+  {
+    "Sprache": "Türkisch",
+    "Kurz": "tr",
+    "Anzahl": 14,
+    "Platz": 12.9285714
+  },
+  {
+    "Sprache": "Ukrainisch",
+    "Kurz": "uk",
+    "Anzahl": 3,
+    "Platz": 10.5
+  }
+]
