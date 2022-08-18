@@ -21,7 +21,12 @@ h6 {
     font-style: normal;
     color: white;
     letter-spacing: 0.01em;
+    width: 100%;
 
+}
+
+h2{
+    font-size: 6em;
 }
 
 p,
@@ -31,13 +36,35 @@ text {
     font-style: normal;
     color: white;
     fill: white;
+    font-size: 1em;
 
+}
+
+/*Parallax Fix */
+.parallaxweak{
+    transform: translate(0, 25px);
+}
+.parallax{
+    transform: translate(0, 50px);
+}
+.parallaxstrong{
+    transform: translate(0, 90px);
+}
+
+/* #endregion */
+/* #region Trenner */
+div.trenner{
+position: relative;
+height: 20vh;
+min-height: 100px;
+max-height: 300px;
+width: 100%;
 }
 
 /* #endregion */
 /* #region Allgemeine Gestaltung von Diagrammen */
 h3 {
-    font-size: 1.6em;
+    font-size: 1.9em;
     line-height: 120%;
     padding-bottom: 10px;
 }
@@ -49,7 +76,7 @@ svg path {
 
 figure.diagramm {
     width: 70%;
-    max-width: 800px;
+    max-width: 1000px;
     display: block;
 
 }
@@ -73,6 +100,13 @@ g.sprachen line {
 
 }
 
+.legende-text {
+    font-size:12px;
+}
+
+rect.bar {
+    fill: white;
+}
 
 /* #endregion */
 /* #region Splash-Screen */
@@ -146,9 +180,10 @@ div.bgpic#titelzwei {
 }
 
 div.bgpic h1 {
-    font-size: 3em;
+    font-size: calc(30px + 4vw);
     color: white;
-    max-width: 500px;
+    width: 1000px;
+    max-width: 80%;
     padding: 0 20px;
     text-align: center;
 }
@@ -158,30 +193,38 @@ div.bgpic h1 {
 
 /* #endregion */
 /* #region Video-Titel */
-section.panel.video {
+div.video-container{
+    height: 100vh;
     width: 100vw;
-    height: calc(100vh);
+    max-width: 100%;
+    min-width: 300px;
+    min-height: 400px;
+    position: relative;
+}
+div.video-container video {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%)
+}
+div.video-container img.overlay {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    mix-blend-mode: multiply;
+}
+div.video-content  {
+    width: 100%;
+    height: 100%;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    overflow: hidden;
-}
-
-section.panel.video video {
-    object-fit: cover;
-    width: 100%;
-    height: calc(100% + 105px);
-
-}
-
-section.panel.video div.video-title {
-    position: absolute;
-}
-
-section.panel.video div.video-title {
-    font-size: 3em;
-    color: whitesmoke;
+    z-index: 10;
+    mix-blend-mode: normal;
 }
 
 /* #endregion */
@@ -194,7 +237,7 @@ section.background {
 }
 
 div.content {
-    max-width: 1300px;
+    max-width: 1800px;
     width: 100%;
     height: max-content;
     overflow: hidden;
@@ -275,8 +318,12 @@ section.diagramm div.side div.fact {
 
 /* #endregion */
 /* #region Sprachen Diagramm */
+
 section.background.language {
     background-image: url(/Resources/img/bg/lila-2.svg);
+}
+section.background.composer {
+    background-image: url(/Resources/img/bg/blau-2.svg);
 }
 
 
@@ -290,6 +337,138 @@ strong.it {
 
 strong.fr {
     color: lightblue;
+}
+
+/* #endregion */
+/* #region Split */
+section.split{
+    min-height: 400px;
+    min-width: 100px;
+    width: 100%;
+    display:flex;
+    padding: 0px;
+    position: relative;
+    max-height: 500px;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+section.split div.image{
+width: 60%;
+min-width: 100px;
+padding: 10px;
+position: relative;
+max-height: 500px;
+}
+section.split div.image img{
+    width: 100%;
+    min-width: 100px;
+    min-width: 100px;
+    position: relative;
+    margin: auto 0;
+    max-height: 500px;
+    max-width: 500px;
+    z-index: 1;
+    }
+section.split div.image h3.caption {
+    position: absolute;
+left: 5%;
+top: 75%;
+    z-index: 10;
+    width:fit-content;
+    height:70px;
+    font-size: 2.8em;
+}
+
+section.split div.image p.caption {
+    position: absolute;
+    left: 20%;
+    top: 56%;
+        z-index: 10;
+        width:fit-content;
+        height:70px;
+        font-size: 1em; 
+        line-height: 140%;
+}
+
+section.split div.caption{
+width: 40%;
+min-width: 100px;
+padding: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+h1.bgcaption {
+    position: absolute;
+left: 57%;
+top: 50%;
+    z-index: 0.5;
+    width:fit-content;
+    height:100px;
+    font-size: 12em;
+}
+
+div.captioncontainer{
+    position: absolute;
+    left: 70%;
+    top: 40%;
+    z-index: 0.5;
+    width:fit-content;
+    height:100px;
+}
+
+
+#meinungerzahl {
+    left: 5%;
+    top: 30%;
+}
+#meinungername {
+    left: 40%;
+}
+
+#gsonzahl {
+    top: 20%;
+    left: 50%;
+}
+
+#milanovzahl {
+    top: 28%;
+    left: 50%;
+}
+
+#sharonzahl {
+ left: 16%;
+ top: 19%;
+}
+#sharonname{
+    top: 60%;
+    left: 30%;
+}
+/* #endregion */
+/* #region Sprachen Fakte Split */
+#love-bulgaria-lyrics{
+
+}
+
+#bulgaria-zahl {
+    top: 0;
+    left: 0;
+    font-size: 12em;
+    line-height: 0.5em;
+}
+
+#fantasie-name{
+    font-size: 3em;
+    left: 40%;
+    top: 30%;
+    line-height: 90%;
+}
+
+#fantasie-lyrics {
+top: 65%;
+left:30%;
 }
 
 /* #endregion */

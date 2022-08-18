@@ -1,20 +1,25 @@
 //#region Balkendiagramm Komponisten & Gender 
 d3.json("./Resources/data/csvjson.json", function (data) {
+    let widthInput = 800;
+    let heightInput = 500;
 
-    let svgGender = d3.select("svg.compgender"),
-        margin = 100,
-        width = svgGender.attr("width") - margin,
-        height = svgGender.attr("height") - margin,
-        heightZehn = height + 10,
-        padding = 0.,
+    let margin = { top: 10, right: 30, bottom: 30, left: 60 },
+        width = widthInput - margin.left - margin.right,
+        height = heightInput - margin.top - margin.bottom;
 
-        xScale = d3.scaleBand()
-            .range([0, width])
+    let svg = d3.select("#gender")
+        .append("svg")
+        .attr("viewBox", `0 0 ${widthInput} ${heightInput}`)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
 
-            .padding(padding)
-            .domain(data.map(function (d) {
-                return d.Jahr;
-            })),
+    let xScale = d3.scaleBand()
+        .range([0, width])
+
+        .padding(0)
+        .domain(data.map(function (d) {
+            return d.Jahr;
+        })),
 
         xScaleAxis = d3.scaleLinear()
 
@@ -33,9 +38,10 @@ d3.json("./Resources/data/csvjson.json", function (data) {
 
         yScale = d3.scaleLinear()
             .range([height, 0])
-            .domain([0, d3.max(data, function (d) {
-                return d.Geschlecht;
-            })]),
+            .domain([0, 100])
+        // 0 bis max value
+        //  .domain([0, d3.max(data, function (d) {  return d.Geschlecht;  })])
+        ,
 
         yAxis = d3.axisLeft(yScale)
             .ticks(5)
@@ -44,24 +50,23 @@ d3.json("./Resources/data/csvjson.json", function (data) {
     yAxisGrid = d3.axisLeft(yScale)
         .ticks(5)
         .tickFormat('')
-        .tickSize(700);
+        .tickSize(710);
 
-    let gGender = svgGender.append("g")
+    let gGender = svg.append("g")
         .attr("class", "compgender");
 
     gGender.append("g")
         .call(xAxis)
-        .attr("transform", "translate(50," + heightZehn
-            + ")");
+        .attr("transform", `translate(0, ${height})`)
 
     gGender.append("g")
         .call(yAxis)
-        .attr("transform", "translate(50,10)");
+
 
     gGender.append("g")
         .call(yAxisGrid)
         .attr("class", "grid")
-        .attr("transform", "translate(750,10)");
+        .attr("transform", "translate(710,0)");
 
     gGender.selectAll(".genderBar")
         .data(data)
@@ -69,10 +74,10 @@ d3.json("./Resources/data/csvjson.json", function (data) {
         .append("rect")
         .attr("class", "bar")
         .attr("x", function (d) {
-            return 50 + xScale(d.Jahr);
+            return xScale(d.Jahr);
         })
         .attr("y", function (d) {
-            return 10 + yScale(d.Geschlecht);
+            return yScale(d.Geschlecht);
         })
         .attr("width", xScale.bandwidth())
         .attr("height", function (d) {
@@ -143,12 +148,12 @@ d3.json("./Resources/data/sprache-alle.json", function (data) {
         .attr("fill", "lightgrey")
         .attr("opacity", "0.2");
 
-//Legende
-svg.select("g")
-.append("text")
-.text("Anzahl Songs")
-.attr("transform", "translate(-40,0) rotate(-90)")
-.attr("text-anchor", "end")
+    //Legende
+    svg.select("g")
+        .append("text")
+        .text("Anzahl Songs")
+        .attr("transform", "translate(-40,0) rotate(-90)")
+        .attr("text-anchor", "end")
 
     //Linie
 
@@ -217,7 +222,7 @@ d3.json("./Resources/data/langsuccess.json", function (data) {
     let widthInput = 800;
     let heightInput = 600;
 
-    let margin = { top: 10, right: 30, bottom: 50, left: 60 },
+    let margin = { top: 80, right: 50, bottom: 100, left: 80 },
         width = widthInput - margin.left - margin.right,
         height = heightInput - margin.top - margin.bottom;
 
@@ -261,7 +266,7 @@ d3.json("./Resources/data/langsuccess.json", function (data) {
         .attr("class", "axis")
         .call(yScaleTicks);
 
-        //tooltip
+    //tooltip
 
     let tooltip = d3.select("div.fact.null.langsucc span")
         .append("p")
@@ -271,27 +276,27 @@ d3.json("./Resources/data/langsuccess.json", function (data) {
     let mouseover = function (d) {
         tooltip
             .style("opacity", 1);
-            d3.selectAll(".active-circle").style("fill", "white");
-            d3.select(this).style("fill", "red").attr("class", "active-circle")
+        d3.selectAll(".active-circle").style("fill", "white");
+        d3.select(this).style("fill", "red").attr("class", "active-circle")
     }
-    let mousemove = function(d) {
+    let mousemove = function (d) {
         tooltip
-          .html(d.Land + "<br>Anteil der Songs in Landessprache:<br>" + d.AnteilSprache +"<br>Durchschnittlicher Platz:<br>" +d.Platz)
+            .html(d.Land + "<br>Anteil der Songs in Landessprache:<br>" + d.AnteilSprache + "<br>Durchschnittlicher Platz:<br>" + d.Platz)
 
-      }
-    
-      var mouseleave = function(d) {
+    }
+
+    var mouseleave = function (d) {
         tooltip
-          .transition()
-          .duration(50)
-          .style("opacity", 1)
-    
-      }
+            .transition()
+            .duration(50)
+            .style("opacity", 1)
+
+    }
 
     //Kreise
     svg.append("g")
-    .attr("class", "kreise")
-    .selectAll("g.kreise")
+        .attr("class", "kreise")
+        .selectAll("g.kreise")
         .data(data)
         .enter()
         .append("g")
@@ -306,27 +311,27 @@ d3.json("./Resources/data/langsuccess.json", function (data) {
         .on("mousemove", mousemove)
         .on("mouseleave", mouseleave)
 
-        //Legende
-svg.append("g")
-.append("text")
-.text("Anteil Songs in Landessprache")
-.attr("transform", "translate(-50,0) rotate(-90)")
-.attr("text-anchor", "end")
+    //Legende
+    svg.append("g")
+        .append("text")
+        .text("Anteil Songs in Landessprache")
+        .attr("transform", "translate(-50,0) rotate(-90)")
+        .attr("text-anchor", "end")
 
-svg.append("g")
-.append("text")
-.text("Durchschnittlicher Platz")
-.attr("transform", "translate(710,580)")
-.attr("text-anchor", "end")
+    svg.append("g")
+        .append("text")
+        .text("Durchschnittlicher Platz")
+        .attr("transform", "translate(710,580)")
+        .attr("text-anchor", "end")
 
-//Land-Label
-svg.selectAll(".kreis")
-.append("g")
-.attr("class", "label")
-.attr("opacity", "1" )
-.append("text")
-.text(function(d){return d.Land})
-.attr("transform", function(d){return "translate("+ parseInt(15 + parseInt(xScale(d.Platz))) +"," + parseInt(6 + parseInt(yScale(d.AnteilSprache))) + ")"})
+    //Land-Label
+    svg.selectAll(".kreis")
+        .append("g")
+        .attr("class", "label")
+        .attr("display", "none")
+        .append("text")
+        .text(function (d) { return d.Land })
+        .attr("transform", function (d) { return "translate(" + parseInt(15 + parseInt(xScale(d.Platz))) + "," + parseInt(6 + parseInt(yScale(d.AnteilSprache))) + ")" })
 
 
 
@@ -346,52 +351,126 @@ d3.json("./Resources/data/spracheanzahl.json", function (data) {
         width = widthInput - margin.left - margin.right,
         height = heightInput - margin.top - margin.bottom;
 
-        let svg = d3.select("#langprevalence")
+    let svg = d3.select("#langprevalence")
         .append("svg")
         .attr("viewBox", `0 0 ${widthInput} ${heightInput}`)
         .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
 
     //Vorbereitung Skala
-        let yScale = d3.scaleLinear()
+    let yScale = d3.scaleLinear()
         .domain([25, 10])
         .range([0, height]);
 
-        let yScaleTicks = d3.axisLeft(yScale)
+    let yScaleTicks = d3.axisLeft(yScale)
         .ticks(20)
-
-    svg.append("g")
-        .attr("class", "axis")
-        .call(yScaleTicks);
 
     //Labels
     svg.selectAll("g")
-    .attr("class", "sprachen")
-    .data(data)
-    .enter()
-    .append("g")
-    .filter(function(d){return d.Anzahl > 5})
-    .attr("transform", function(d){return "translate(30," + yScale(d.Platz) + ")"})
-    .append("text")
-    .text(function (d) { return d.Sprache})
+        .attr("class", "labels")
+        .data(data.filter(function (d) { return d.Anzahl > 7 }))
+        .enter()
+        .append("g")
+        .attr("class", "labels")
+        .attr("transform", function (d) { return "translate(30," + yScale(d.Platz) + ")" })
+        .append("text")
+        .text(function (d) { return d.Sprache }),
+
+        //achse
+        svg.append("g")
+            .attr("class", "axis")
+            .call(yScaleTicks);
+
 
     //Legende
-    svg.select("g")
-    .append("text")
-    .text("Durchschnittlicher Platz")
-    .attr("transform", "translate(-30,-5) rotate(-90)")
-    .attr("text-anchor", "end")
+    svg.append("g")
+        .append("text")
+        .text("Durchschnittlicher Platz")
+        .attr("transform", "translate(-30,-5) rotate(-90)")
+        .attr("text-anchor", "end")
+        .attr("class", "legende-text")
 
     //Korrektur für Lesbarkeit
-    svg.selectAll("g")
-    .filter(function(d){return d.Sprache === "Russisch"})
-    .attr("transform", function(d){return "translate(30," + parseInt(20 + parseInt(yScale(d.Platz))) + ")"});
-    svg.selectAll("g")
-    .filter(function(d){return d.Sprache === "T\u00fcrkisch"})
-    .attr("transform", function(d){return "translate(30," + parseInt(10 + parseInt(yScale(d.Platz))) + ")"});
+    svg.selectAll("g.labels")
+        .filter(function (d) { return d.Sprache === "Russisch" })
+        .attr("transform", function (d) { return "translate(30," + parseInt(25 + parseInt(yScale(d.Platz))) + ")" });
+    svg.selectAll("g.labels")
+        .filter(function (d) { return d.Sprache === "Hebr\u00e4isch" })
+        .attr("transform", function (d) { return "translate(30," + parseInt(-20 + parseInt(yScale(d.Platz))) + ")" });
+    svg.selectAll("g.labels")
+        .filter(function (d) { return d.Sprache === "T\u00fcrkisch" })
+        .attr("transform", function (d) { return "translate(30," + parseInt(10 + parseInt(yScale(d.Platz))) + ")" });
+    svg.selectAll("g.labels")
+        .filter(function (d) { return d.Sprache === "Spanisch" })
+        .attr("transform", function (d) { return "translate(30," + parseInt(20 + parseInt(yScale(d.Platz))) + ")" });
+    svg.selectAll("g.labels")
+        .filter(function (d) { return d.Sprache === "Niederl\u00e4ndisch" })
+        .attr("transform", function (d) { return "translate(30," + parseInt(-8 + parseInt(yScale(d.Platz))) + ")" });
+    svg.selectAll("g.labels")
+        .filter(function (d) { return d.Sprache === "Ungarisch" })
+        .attr("transform", function (d) { return "translate(30," + parseInt(-5 + parseInt(yScale(d.Platz))) + ")" });
+    svg.selectAll("g.labels")
+        .filter(function (d) { return d.Sprache === "Estnisch" })
+        .attr("transform", function (d) { return "translate(30," + parseInt(-5 + parseInt(yScale(d.Platz))) + ")" });
 
 
 });
+//#endregion
+//#region langbarcomparison
+let langCompData = [{ Sprache: "Landessprache", Platz: 16.8 }, { Sprache: "Andere Sprache", Platz: 19.0 }]
+
+console.log("3test");
+let widthInput = 600;
+let heightInput = 600;
+
+let margin = { top: 10, right: 30, bottom: 30, left: 60 },
+    width = widthInput - margin.left - margin.right,
+    height = heightInput - margin.top - margin.bottom;
+
+let svg = d3.select("#langbarcomparison")
+    .append("svg")
+    .attr("viewBox", `0 0 ${widthInput} ${heightInput}`)
+    .append("g")
+    .attr("transform", `translate(${margin.left},${margin.top})`);
+
+//Vorbereitung Skala
+let yScale = d3.scaleLinear()
+    .domain([40, 0])
+    .range([0, height]);
+
+let yScaleTicks = d3.axisLeft(yScale)
+    .ticks(3)
+
+/* svg.append("g")
+ .attr("class", "axis")
+ .call(yScaleTicks);*/
+
+//Balken
+svg.append("g")
+    .attr("class", "balken")
+    .selectAll("g.balken")
+    .data(langCompData)
+    .enter()
+    .append("rect")
+    .attr("width", "150")
+    .style("fill", "white")
+    .attr("height", function (d) {
+        return height - yScale(d.Platz);
+    })
+
+    .attr("y", function (d) {
+        return 10 + yScale(d.Platz);
+    })
+    .attr("x", function (d) {
+        return 50
+    })
+
+    .filter(function (d) { return d.Sprache === "Landessprache" })
+    .attr("x", function (d) {
+        return 400
+    })
+
+
 //#endregion
 //#region Splash-Screen Animation
 
@@ -407,29 +486,32 @@ let tl = gsap.timeline({
     }
 });
 tl.to("#buhne", { opacity: 1, duration: 2, ease: Power4.easeout, })
-tl.to("#fragez", { opacity: 1, duration: 1,  })
+tl.to("#fragez", { opacity: 1, duration: 1, })
 tl.to("#buhne", { opacity: 0.8, duration: 0.5, delay: 6 })
 
-tl.to("#buhne", { opacity: 0.3, duration: 0.5, delay: 0.2})
+tl.to("#buhne", { opacity: 0.3, duration: 0.5, delay: 0.2 })
 tl.to("#fragez", { opacity: 0.3, duration: 0.5 })
 tl.to("#titeleins", { opacity: 1, duration: 0.5 })
 tl.add(frageTl())
 tl.to("#titeleins", { y: 0, ease: Power1.easeout, duration: 0.5 })
-tl.to("#titeleins", { opacity: 0, duration: 1,  delay: 4})
-tl.to("#titelzwei", { opacity: 1, duration: 0.5})
-tl.to("#titelzwei", { opacity: 1, duration: 1, delay: 4})
+tl.to("#titeleins", { opacity: 0, duration: 1, delay: 4 })
+tl.to("#titelzwei", { opacity: 1, duration: 0.5 })
+tl.to("#titelzwei", { opacity: 1, duration: 1, delay: 4 })
 
 
-function frageTl() { let tl = gsap.timeline({repeat: -1, repeatDelay: 0});
-tl.to("#fragez", {y:5,  ease: Power1.easeOut, duration: 1});
-tl.to("#fragez", {y:0, ease: Power1.easeOut, duration: 1.5}); }
+function frageTl() {
+    let tl = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+    tl.to("#fragez", { y: 5, ease: Power1.easeOut, duration: 1 });
+    tl.to("#fragez", { y: 0, ease: Power1.easeOut, duration: 1.5 });
+}
 
 //#endregion
+
 //#region Scroll-Zeug
 
-let iconTl = gsap.timeline({repeat: -1, repeatDelay: 0.2});
-iconTl.to("#scroll-icon", {y:5,  ease: Power2. easeOut, duration: 0.3});
-iconTl.to("#scroll-icon", {y:0, duration: 0.7});
+let iconTl = gsap.timeline({ repeat: -1, repeatDelay: 0.2 });
+iconTl.to("#scroll-icon", { y: 5, ease: Power2.easeOut, duration: 0.3 });
+iconTl.to("#scroll-icon", { y: 0, duration: 0.7 });
 
 let langEnterDrei = function (d) {
     d3.select("path.lang.de")
@@ -497,55 +579,6 @@ let langLeaveEins = function (d) {
 
 
 ScrollTrigger.create({
-    trigger: "#video-lang",
-    start: "top top",
-    end: "bottom px",
-    pin: "#video-lang",
-    markers: false,
-
-});
-
-gsap.from("#title-lang", {
-    y: 30,
-    opacity: 0.0,
-    scrollTrigger: {
-        trigger: "#video-lang",
-        start: "top top",
-        end: "+=300",
-        scrub: 0.3,
-        markers: false,
-    }
-});
-gsap.to("#video-test", {
-    y: -50,
-    opacity: 0.6,
-    scrollTrigger: {
-        trigger: "#video-lang",
-        start: "top top",
-        end: "+=300",
-        scrub: true,
-        markers: false
-
-    }
-});
-ScrollTrigger.create({
-    trigger: "section.diagramm.language div.side",
-    start: "top top",
-    end: "bottom bottom",
-    pin: "section.diagramm.language div.object",
-    markers: false,
-
-});
-ScrollTrigger.create({
-    trigger: "section.diagramm.langsuccess div.side",
-    start: "top top",
-    end: "bottom bottom",
-    pin: "section.diagramm.langsuccess div.object",
-    markers: false,
-
-});
-
-ScrollTrigger.create({
     trigger: "div.fact.eins.lang",
     start: "top 20%",
     end: "bottom 70%",
@@ -579,9 +612,80 @@ ScrollTrigger.create({
 
 
 
+//#endregion
+
+//#region Video-title
+const videoTitle = gsap.utils.toArray('div.video-container');
+videoTitle.forEach(videoContainer => {
+
+    let overlay = videoContainer.querySelector("img.overlay"),
+        video = videoContainer.querySelector("video"),
+        text = videoContainer.querySelector(".video-content")
+        tl = gsap.timeline({
+            scrollTrigger: {
+            trigger: videoContainer,
+            scrub: true,
+            markers: false,
+            pin: true
+        }
+    });
+     //   tl.from(video, {"filter": "grayscale(0%)"}, 1)
+      //  tl.from(overlay, {opacity: 0}, 1)
+        tl.from(text, {opacity: 0}, 2)
+        tl.to(text, {delay: 1}, 3)
 
 
-  //Video-tile
+        }
+    );
+
+    //Pinnen von Diagrammen
+
+const diagrammBox = gsap.utils.toArray("section.diagramm.pin")
+diagrammBox.forEach(box => {
+    let pinnedObject = box.querySelector("div.object")
+        ScrollTrigger.create({
+            trigger: box,
+            pin: pinnedObject,
+            start: "top top",
+            end: "bottom bottom"
+        })
+})
+
+//#endregion
+//#region Parallax
+
+const parallaxes = gsap.utils.toArray('.parallax');
+parallaxes.forEach(parallax => {
+    gsap.to(parallax, {
+        y: -100,
+        scrollTrigger: {
+            trigger: parallax,
+            scrub: true
+        }
+    })
+});
+
+const parallaxesweak = gsap.utils.toArray('.parallaxweak');
+parallaxesweak.forEach(parallaxweak => {
+    gsap.to(parallaxweak, {
+        y: -50,
+        scrollTrigger: {
+            trigger: parallaxweak,
+            scrub: true
+        }
+    })
+});
+const parallaxesstrong = gsap.utils.toArray('.parallaxstrong');
+parallaxesstrong.forEach(parallaxstrong => {
+    gsap.to(parallaxstrong, {
+        y: -180,
+        scrollTrigger: {
+            trigger: parallaxstrong,
+            scrub: true
+        }
+    })
+});
+
 
 
 //#endregion
