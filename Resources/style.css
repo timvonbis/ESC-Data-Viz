@@ -61,6 +61,11 @@ max-height: 300px;
 width: 100%;
 }
 
+.border-medium{
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
 /* #endregion */
 /* #region Allgemeine Gestaltung von Diagrammen */
 h3 {
@@ -251,6 +256,8 @@ section.diagramm {
     overflow: hidden;
     display: flex;
     margin: 0px auto;
+    justify-content: center;
+    align-content: center;
 }
 
 section.diagramm div.object {
@@ -277,9 +284,10 @@ section.text{
     width: 30%;
     max-width: 500px;
     min-width: 400px;
-    min-height: 100vh;
-    height: max-content;
-    margin: 0 auto;
+    min-height: max-content;
+    height: 60vh;
+    max-height: 600px;
+    margin: 40px auto;
     box-sizing: border-box;
     padding: 30px;
     display: flex;
@@ -303,6 +311,7 @@ section.diagramm div.side {
     display: block;
     max-width: 300px;
     height: max-content;
+    position: relative;
 
 }
 
@@ -313,6 +322,7 @@ section.diagramm div.side div.fact {
     justify-content: center;
     flex-direction: column;
     align-content: left;
+    min-height: 300px;
 
 }
 
@@ -320,12 +330,15 @@ section.diagramm div.side div.fact {
 /* #region Sprachen Diagramm */
 
 section.background.language {
-    background-image: url(/Resources/img/bg/lila-2.svg);
+    background-image: url(/Resources/img/bg/1920w/lila.jpg);
 }
 section.background.composer {
-    background-image: url(/Resources/img/bg/blau-2.svg);
+    background-image: url(/Resources/img/bg/1920w/blau.jpg);
 }
 
+section.background.points {
+    background-image: url(/Resources/img/bg/1920w/grun.jpg);
+}
 
 strong.de {
     color: gold;
@@ -339,6 +352,40 @@ strong.fr {
     color: lightblue;
 }
 
+/*Sprache Leiste */
+section.langprevalence{
+    height: 2000px;
+}
+
+section.langprevalence div.side{
+    height: 100%;
+    width: 70%;
+    position: relative;
+}
+section.langprevalence div.side div.fact{
+    height: max-content;
+    width: 100%;
+    position: absolute;
+}
+section.langprevalence div.side div.fact.eins{
+    top: 10%;
+}
+section.langprevalence div.side div.fact.zwei{
+    top: 45%;
+}
+section.langprevalence div.side div.fact.drei{
+    top: 80%;
+}
+
+section.langprevalence div.object{
+    height: 100%;
+    width: 30%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+
+}
+
 /* #endregion */
 /* #region Split */
 section.split{
@@ -350,10 +397,10 @@ section.split{
     position: relative;
     max-height: 500px;
     max-width: 1200px;
-    margin: 100px auto;
+    margin: 80px auto 120px;
 }
 section.split div.image{
-width: 60%;
+width: 55%;
 min-width: 100px;
 padding: 10px;
 position: relative;
@@ -391,7 +438,7 @@ section.split div.image p.caption {
 }
 
 section.split div.caption{
-width: 40%;
+width: 45%;
 min-width: 100px;
 padding: 30px;
 display: flex;
@@ -440,14 +487,36 @@ div.captioncontainer{
 
 #sharonzahl {
  left: 16%;
- top: 19%;
+ top: 17%;
 }
 #sharonname{
     top: 60%;
     left: 30%;
 }
 /* #endregion */
+/* #region Split-Hero */
+section.split div.image.hero{
+    width: 60%;
+    min-width: 100px;
+    padding: 10px;
+    position: relative;
+    max-height: 500px;
+    }
+    section.split div.image.hero img{
+        width: 100%;
+        min-width: 100px;
+        min-width: 100px;
+        position: absolute;
+        margin: auto 0;
+        max-height: 500px;
+        max-width: 500px;
+        z-index: 1;
+        right: 0;
+        }
+
+/* #endregion */
 /* #region Sprachen Fakte Split */
+
 #love-bulgaria-lyrics{
 
 }
@@ -470,5 +539,59 @@ div.captioncontainer{
 top: 65%;
 left:30%;
 }
+
+/* #endregion */
+/* #region Texte mit Bildern */
+section.bildtext {
+    width: 100%;
+    min-width: 500px;
+    height: 100vh;
+    max-height: 1300px;
+    min-height: 700px;
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+section.bildtext div.centertext {
+    width: 30%;
+    min-width: 400px;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+
+}
+
+section.bildtext div.centerbilder {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    overflow: hidden;
+
+}
+
+section.bildtext div.centerbilder img.hinten {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+
+}
+
+section.bildtext div.centerbilder img.vorne {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+}
+
 
 /* #endregion */

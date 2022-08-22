@@ -1,6 +1,7 @@
 [
   {
     "Land": "Montenegro",
+    "LandDE": "Montenegro",
     "Punkte": 348,
     "Teilnahmen": 11,
     "Platz": 31.64,
@@ -9,6 +10,7 @@
   },
   {
     "Land": "San Marino",
+    "LandDE": "San Marino",
     "Punkte": 338,
     "Teilnahmen": 11,
     "Platz": 30.73,
@@ -17,6 +19,7 @@
   },
   {
     "Land": "Belarus",
+    "LandDE": "Belarus",
     "Punkte": 429,
     "Teilnahmen": 17,
     "Platz": 25.24,
@@ -25,6 +28,7 @@
   },
   {
     "Land": "North Macedonia",
+    "LandDE": "Nordmazedonien",
     "Punkte": 459,
     "Teilnahmen": 20,
     "Platz": 22.95,
@@ -33,6 +37,7 @@
   },
   {
     "Land": "Latvia",
+    "LandDE": "Lettland",
     "Punkte": 477,
     "Teilnahmen": 21,
     "Platz": 22.71,
@@ -41,6 +46,7 @@
   },
   {
     "Land": "Finland",
+    "LandDE": "Finnland",
     "Punkte": 584,
     "Teilnahmen": 26,
     "Platz": 22.46,
@@ -49,6 +55,7 @@
   },
   {
     "Land": "Slovenia",
+    "LandDE": "Slovenien",
     "Punkte": 579,
     "Teilnahmen": 26,
     "Platz": 22.27,
@@ -57,6 +64,7 @@
   },
   {
     "Land": "Switzerland",
+    "LandDE": "Schweiz",
     "Punkte": 595,
     "Teilnahmen": 27,
     "Platz": 22.04,
@@ -65,6 +73,7 @@
   },
   {
     "Land": "Lithuania",
+    "LandDE": "Litauen",
     "Punkte": 451,
     "Teilnahmen": 21,
     "Platz": 21.48,
@@ -73,6 +82,7 @@
   },
   {
     "Land": "Bulgaria",
+    "LandDE": "Bulgarien",
     "Punkte": 278,
     "Teilnahmen": 13,
     "Platz": 21.38,
@@ -81,6 +91,7 @@
   },
   {
     "Land": "Albania",
+    "LandDE": "Albanien",
     "Punkte": 351,
     "Teilnahmen": 17,
     "Platz": 20.65,
@@ -89,6 +100,7 @@
   },
   {
     "Land": "Belgium",
+    "LandDE": "Belgien",
     "Punkte": 570,
     "Teilnahmen": 28,
     "Platz": 20.36,
@@ -97,6 +109,7 @@
   },
   {
     "Land": "Portugal",
+    "LandDE": "Portugal",
     "Punkte": 546,
     "Teilnahmen": 27,
     "Platz": 20.22,
@@ -105,6 +118,7 @@
   },
   {
     "Land": "Poland",
+    "LandDE": "Polen",
     "Punkte": 455,
     "Teilnahmen": 23,
     "Platz": 19.78,
@@ -121,6 +135,7 @@
   },
   {
     "Land": "Netherlands",
+    "LandDE": "Niederlande",
     "Punkte": 520,
     "Teilnahmen": 28,
     "Platz": 18.57,
@@ -129,6 +144,7 @@
   },
   {
     "Land": "Hungary",
+    "LandDE": "Ungarn",
     "Punkte": 315,
     "Teilnahmen": 17,
     "Platz": 18.53,
@@ -137,6 +153,7 @@
   },
   {
     "Land": "Estonia",
+    "LandDE": "Estland",
     "Punkte": 478,
     "Teilnahmen": 26,
     "Platz": 18.38,
@@ -145,6 +162,7 @@
   },
   {
     "Land": "Austria",
+    "LandDE": "Österreich",
     "Punkte": 456,
     "Teilnahmen": 25,
     "Platz": 18.24,
@@ -153,6 +171,7 @@
   },
   {
     "Land": "Moldova",
+    "LandDE": "Moldavien",
     "Punkte": 285,
     "Teilnahmen": 16,
     "Platz": 17.81,
@@ -161,6 +180,7 @@
   },
   {
     "Land": "Iceland",
+    "LandDE": "Island",
     "Punkte": 513,
     "Teilnahmen": 29,
     "Platz": 17.69,
@@ -169,6 +189,7 @@
   },
   {
     "Land": "Cyprus",
+    "LandDE": "Zypern",
     "Punkte": 507,
     "Teilnahmen": 29,
     "Platz": 17.48,
@@ -177,6 +198,7 @@
   },
   {
     "Land": "Croatia",
+    "LandDE": "Kroatien",
     "Punkte": 452,
     "Teilnahmen": 26,
     "Platz": 17.38,
@@ -185,6 +207,7 @@
   },
   {
     "Land": "Israel",
+    "LandDE": "Israel",
     "Punkte": 471,
     "Teilnahmen": 28,
     "Platz": 16.82,
@@ -193,6 +216,7 @@
   },
   {
     "Land": "Ireland",
+    "LandDE": "Irland",
     "Punkte": 504,
     "Teilnahmen": 30,
     "Platz": 16.8,
@@ -201,6 +225,7 @@
   },
   {
     "Land": "Malta",
+    "LandDE": "Malta",
     "Punkte": 470,
     "Teilnahmen": 30,
     "Platz": 15.67,
@@ -209,6 +234,7 @@
   },
   {
     "Land": "Spain",
+    "LandDE": "Spanien",
     "Punkte": 467,
     "Teilnahmen": 31,
     "Platz": 15.06,
@@ -217,6 +243,7 @@
   },
   {
     "Land": "Germany",
+    "LandDE": "Deutschland",
     "Punkte": 433,
     "Teilnahmen": 30,
     "Platz": 14.43,
@@ -225,6 +252,7 @@
   },
   {
     "Land": "Denmark",
+    "LandDE": "Dänemark",
     "Punkte": 386,
     "Teilnahmen": 27,
     "Platz": 14.3,
@@ -233,6 +261,7 @@
   },
   {
     "Land": "United Kingdom",
+    "LandDE": "Vereinigtes Königreich",
     "Punkte": 442,
     "Teilnahmen": 31,
     "Platz": 14.26,
@@ -241,6 +270,7 @@
   },
   {
     "Land": "Armenia",
+    "LandDE": "Armenien",
     "Punkte": 199,
     "Teilnahmen": 14,
     "Platz": 14.21,
@@ -249,6 +279,7 @@
   },
   {
     "Land": "Serbia",
+    "LandDE": "Serbien",
     "Punkte": 183,
     "Teilnahmen": 13,
     "Platz": 14.08,
@@ -257,6 +288,7 @@
   },
   {
     "Land": "Romania",
+    "LandDE": "Rumänien",
     "Punkte": 294,
     "Teilnahmen": 21,
     "Platz": 14,
@@ -265,6 +297,7 @@
   },
   {
     "Land": "Bosnia & Herzegovina",
+    "LandDE": "Bosnien und Herzegovina",
     "Punkte": 264,
     "Teilnahmen": 19,
     "Platz": 13.89,
@@ -273,6 +306,7 @@
   },
   {
     "Land": "France",
+    "LandDE": "Frankreich",
     "Punkte": 425,
     "Teilnahmen": 31,
     "Platz": 13.71,
@@ -281,6 +315,7 @@
   },
   {
     "Land": "Norway",
+    "LandDE": "Norwegen",
     "Punkte": 404,
     "Teilnahmen": 30,
     "Platz": 13.47,
@@ -289,6 +324,7 @@
   },
   {
     "Land": "Greece",
+    "LandDE": "Griechenland",
     "Punkte": 374,
     "Teilnahmen": 29,
     "Platz": 12.9,
@@ -297,6 +333,7 @@
   },
   {
     "Land": "Turkey",
+    "LandDE": "Türkei",
     "Punkte": 249,
     "Teilnahmen": 22,
     "Platz": 11.32,
@@ -305,6 +342,7 @@
   },
   {
     "Land": "Azerbaijan",
+    "LandDE": "Azerbaijan",
     "Punkte": 126,
     "Teilnahmen": 13,
     "Platz": 9.69,
@@ -313,6 +351,7 @@
   },
   {
     "Land": "Sweden",
+    "LandDE": "Schweden",
     "Punkte": 271,
     "Teilnahmen": 31,
     "Platz": 8.74,
@@ -321,6 +360,7 @@
   },
   {
     "Land": "Ukraine",
+    "LandDE": "Ukraine",
     "Punkte": 137,
     "Teilnahmen": 16,
     "Platz": 8.56,
@@ -329,6 +369,7 @@
   },
   {
     "Land": "Russia",
+    "LandDE": "Russland",
     "Punkte": 196,
     "Teilnahmen": 23,
     "Platz": 8.52,
@@ -337,6 +378,7 @@
   },
   {
     "Land": "Italy",
+    "LandDE": "Italien",
     "Punkte": 99,
     "Teilnahmen": 15,
     "Platz": 6.6,
