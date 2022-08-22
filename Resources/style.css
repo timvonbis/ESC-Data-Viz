@@ -7,7 +7,7 @@
 }
 
 @media screen and (min-width: 1800px){ 
-.main{font-size:1.5em} 
+.main{font-size:1.25em} 
 }
 
 * {
@@ -527,9 +527,6 @@ section.split div.image.hero{
 /* #endregion */
 /* #region Sprachen Fakte Split */
 
-#love-bulgaria-lyrics{
-
-}
 
 #bulgaria-zahl {
     top: 0;
