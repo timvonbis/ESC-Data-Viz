@@ -9,7 +9,8 @@
     <link href="./Resources/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/fre7yjs.css">
 
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
     <script src="./Resources/script.js" defer></script>
 
@@ -45,36 +46,43 @@
         </section>
         <section>
             <div class="video-container">
-            
-            <video muted autoplay loop id="video-test">
-                <source src="./Resources/vid/Sprache.mp4" type="video/mp4">
-            </video>
-            <img class="overlay" src="./Resources/img/bg/muster2.jpg">
-            <div class="video-content">
-                <div class="video-title" id="title-lang">
-                    <h2>Sprache der Texte</h2>
+
+                <video muted autoplay loop id="video-test">
+                    <source src="./Resources/vid/Sprache.mp4" type="video/mp4">
+                </video>
+                <img class="overlay" src="./Resources/img/bg/muster2.jpg">
+                <div class="video-content">
+                    <div class="video-title" id="title-lang">
+                        <h2>Sprache der Texte</h2>
+                    </div>
                 </div>
             </div>
-            </div>
         </section>
+   
 
         <section class="background language">
             <div class="content">
-          <section class="split">
-            <div class="left caption">
-                    <h3>Was bedeutet die Sprache f&uuml;r unseren Song?</h3>
-                    <p>Die Sprache der Songs hat historisch im ESC eine gro&szlig;e Bedeutung. Die Sprachwahl wurde mal
-                        reglementiert, manche Songs machen die Sprache selbst zum Thema, viele L&auml;nder nutzen auch
-                        ESC-Lieder um etwa Minderheitssprachen oder Dialekten eine B&uuml;hne zu bieten. <br>
-                        Wir schauen uns Fakten rund um Sprache im ESC an und welche Sprachen f&uuml;r unseren ESC-Song
-                        am erfolgsversprechenden sind.</p>
+                <section class="trenner"></section>
+                <section class="split">
+                    <div class="left caption">
+                        <h3>Was bedeutet die Sprache f&uuml;r unseren Song?</h3>
+                        <p>Die Sprache der Songs hat historisch im ESC eine gro&szlig;e Bedeutung. Die Sprachwahl wurde
+                            mal
+                            reglementiert, manche Songs machen die Sprache selbst zum Thema, viele L&auml;nder nutzen
+                            auch
+                            ESC-Lieder um etwa Minderheitssprachen oder Dialekten eine B&uuml;hne zu bieten. <br>
+                            Wir schauen uns Fakten rund um Sprache im ESC an und welche Sprachen f&uuml;r unseren
+                            ESC-Song
+                            am erfolgsversprechenden sind.</p>
                     </div>
 
-            <div class="right image hero">
-                <img class="hinten parallax" src="./Resources/img/people/dadi fryr/dadibg.png">
-        
-                <img class="hinten parallaxweak" src="./Resources/img/people/dadi fryr/dadivg.png">
-            </div>
+                    <div class="right image">
+                        <img class="parallax" src="./Resources/img/people/dadi fryr/dadibg.png">
+                        <img class="parallaxweak hinten" src="./Resources/img/people/dadi fryr/dadivg.png">
+                    </div>
+                </section>
+                <section class="trenner">
+
                 </section>
                 <section class="diagramm language pin">
 
@@ -83,7 +91,7 @@
                         </figure>
                     </div>
                     <div class="side">
-                    <div class="fact null lang">
+                        <div class="fact null lang">
                             <h3>
                                 Anzahl ESC-Beitr&aumlge nach Sprache
                             </h3>
@@ -105,7 +113,7 @@
                                 Der Trend zu Englisch
                             </h3>
                             <span>
-                                <p>Nach 1990 werde immer mehr Songs statt in der Landessprache in Englisch performt, der
+                                <p>Nach 1990 werden immer mehr Songs statt in der Landessprache in Englisch performt, der
                                     bei
                                     weiten am meisten genutzte Sprache im ESC.</p>
                             </span>
@@ -121,9 +129,11 @@
                                     sp&auml;ter.</p>
                             </span>
                         </div>
+
                     </div>
 
                 </section>
+                <section class="trenner"></section>
                 <section class="split">
 
                     <div class="right caption">
@@ -144,7 +154,7 @@
                             Men seni sevirem, Yahabibi, je t'aime<br />
                             I love you, I love only you<br />
                             There are no limits for us.</p>
-                        <div class="parallaxstrong captioncontainer">
+                        <div class="parallaxstrong captioncontainer" id="bulgaria-container">
                             <h1 id="bulgaria-zahl">11</h1><br>
                             <h3 id="bulgaria-zahl-untertitel">Sprachen</h3>
                         </div>
@@ -163,7 +173,7 @@
                             Pokoli meni dita boja<br>
                             Jalina pitsu marusinja<br>
                             Kolosali krokodili</p>
-                            <h1 class="bgcaption parallaxstrong" id="fantasie-name">Oh Julissi <br>&mdash; Ishtar</h1>
+                        <h1 class="bgcaption parallaxstrong" id="fantasie-name">Oh Julissi <br>&mdash; Ishtar</h1>
                     </div>
                     <div class="right caption">
                         <h3>Fantasiesprachen</h3>
@@ -195,7 +205,9 @@
                                 Die Sprachen der Erfolgreichen
                             </h3>
                             <span>
-                                <p>Italien, das Land mit der besten durchschnittlichen Platzierung, verwendet sogar fast in 90% die Landessprache. Andere erfolgreiche L&auml;nder, wie Schweden, Russland oder die Ukraine setzen widerum &ouml;fter auf Englisch.
+                                <p>Italien, das Land mit der besten durchschnittlichen Platzierung, verwendet sogar fast
+                                    in 90% die Landessprache. Andere erfolgreiche L&auml;nder, wie Schweden, Russland
+                                    oder die Ukraine setzen widerum &ouml;fter auf Englisch.
                             </span>
                         </div>
                         <div class="fact zwei bubble">
@@ -203,7 +215,9 @@
                                 Diversit&auml;t im Mittelfeld
                             </h3>
                             <span>
-                                <p>Auch im Mittelfeld gibt es verschiedene Ans&auml;tze, und gro&szlig;e Unterschiede dabei, wie oft die eigene Landessprache verwendet wird. L&auml;nder, in der Englisch Amtssprache ist, benutzen diese sogar fast immer.</p>
+                                <p>Auch im Mittelfeld gibt es verschiedene Ans&auml;tze, und gro&szlig;e Unterschiede
+                                    dabei, wie oft die eigene Landessprache verwendet wird. L&auml;nder, in der Englisch
+                                    Amtssprache ist, benutzen diese sogar fast immer.</p>
                             </span>
                         </div>
                         <div class="fact drei bubble">
@@ -211,18 +225,19 @@
                                 Die weniger Erfolgreichen
                             </h3>
                             <span>
-                                <p>Bei den Schlusslichtern f&auml;llt auf: Hier wird selten die Landessprache verwendet.</p>
+                                <p>Bei den Schlusslichtern f&auml;llt auf: Hier wird selten die Landessprache verwendet.
+                                </p>
                             </span>
+
                         </div>
                     </div>
 
 
                 </section>
                 <section class="text">
-                    <h3>Welche Sprache f&uuml;hrt uns zum Erfolg?</h3>
-                    <p>Zur&uuml;ck zu unserem Song: <br />
-                        Welche Sprachen versprechen f&uuml;r uns den gr&ouml;&szlig;ten Erfolg? Lieber in unserer
-                        Landessprache bleiben, funktioniert Englisch immer, oder lieber etwas ganz Exotisches?</p>
+                    <h3>Welche Sprachen sind die erfolgreichsten?</h3>
+                    <p>Zur&uuml;ck zu unserem Song:
+                        Welche Sprachen versprechen f&uuml;r uns den gr&ouml;&szlig;ten Erfolg? Lieber in unserer Landessprache bleiben, funktioniert Englisch immer, oder lieber etwas ganz Exotisches?</p>
                 </section>
                 <section class="diagramm langprevalence">
                     <div class="object langprevalence">
@@ -232,25 +247,23 @@
                     <div class="side">
                         <div class="fact eins leiste parallax">
                             <h3>Lieber nicht</h3>
-                            <p><p>Diesen Sprachen sollten wir lieber aus dem Weg gehen &mdash; hier hat es im Durchschnitt nicht ein Mal f&uuml;r den 20. Platz gereicht.</p>
-                        </div> 
+                            <p>
+                            <p>Diesen Sprachen sollten wir lieber aus dem Weg gehen &mdash; hier hat es im Durchschnitt
+                                nicht ein Mal f&uuml;r den 20. Platz gereicht.</p>
+                        </div>
                         <div class="fact zwei leiste parallax">
                             <h3>Not great, not terrible.</h3>
-                            <p>Die meisten Sprachen tummeln sich hier im Mittelfeld. Die meistbenutzte Sprache Englisch liegt jedoch ein bisschen hinter dem Durchschnitt.</p>
-                        </div> 
+                            <p>Die meisten Sprachen tummeln sich hier im Mittelfeld. Die meistbenutzte Sprache Englisch
+                                liegt jedoch ein bisschen hinter dem Durchschnitt.</p>
+                        </div>
                         <div class="fact drei leiste parallax">
                             <h3>Statistik-Gewinner</h3>
-                            <p>sind Norwegisch und Schwedisch &mdash; diese Sprachen f&uuml;hren im Durchschnitt zu einem deutlich besserem Ergebnis.</p>
-                        </div> 
+                            <p>sind Norwegisch und Schwedisch &mdash; diese Sprachen f&uuml;hren im Durchschnitt zu
+                                einem deutlich besserem Ergebnis.</p>
+                        </div>
                     </div>
                 </section>
-           <!--     <section class="diagramm langbarcomparison">
-                    <div class="object langbarcomparison">
-                        <figure id="langbarcomparison" class="diagramm">
-                        </figure>
-                    </div>
-                </section>
-  --> 
+
             </div>
         </section>
 
@@ -258,29 +271,31 @@
 
         <section>
             <div class="video-container">
-            <video muted autoplay loop>
-                <source src="./Resources/vid/Komponisten.mp4" type="video/mp4">
-            </video>
-            <img class="overlay" src="./Resources/img/bg/muster3.jpg">
-            <div class="video-content">
-                <div class="video-title" id="title-lang">
-                    <h2>Der ESC und die Komponisten</h2>
+                <video muted autoplay loop>
+                    <source src="./Resources/vid/Komponisten.mp4" type="video/mp4">
+                </video>
+                <img class="overlay" src="./Resources/img/bg/muster3.jpg">
+                <div class="video-content">
+                    <div class="video-title" id="title-lang">
+                        <h2>Der ESC und die Komponisten</h2>
+                    </div>
                 </div>
-            </div>
             </div>
         </section>
 
         <section class="background composer">
             <div class="content">
                 <section class="text">
-                    <h3>Welche Sprache f&uuml;hrt uns zum Erfolg?</h3>
-                    <p>ZAls n&auml;chstes werfen wir einen Blick hinter die Kulissen: Alles rund um Komponisten und Texter beim ESC. Und zuerst: Welche Komponisten sind am einflussreichsten und haben die meisten Songs geschrieben?</p>
+                    <h3>Vom Komponieren und Texten</h3>
+                    <p>Als n&auml;chstes werfen wir einen Blick hinter die Kulissen: Alles rund um Komponisten und
+                        Texter beim ESC. Und zuerst: Welche Komponisten sind am einflussreichsten und haben die meisten
+                        Songs geschrieben?</p>
                 </section>
                 <section class="split">
                     <div class="left image">
-                        <h3 class="caption parallaxweak">Ralph Siegel</h3>
+                        <h3 class="caption parallaxweak" id="siegel-name">Ralph Siegel</h3>
                         <img class="parallax" src="./Resources/img/people/siegel.png">
-                        <h1 class="bgcaption parallaxstrong">25</h1>
+                        <h1 class="bgcaption parallaxstrong" id="siegel-zahl">25</h1>
 
                     </div>
                     <div class="right caption">
@@ -342,31 +357,40 @@
 
                     </div>
                 </section>
+                <section class="trenner-klein"></section>
                 <section class="diagramm komponistenfrau pin">
-                 
+
                     <div class="object">
                         <figure id="gender" class="diagramm">
                         </figure>
                     </div>
                     <div class="side">
-                        <div class="fact">     <h3>
-                            Frauenanteil bei den Komponist:innen
-                        </h3></div>
+                        <div class="fact">
+                            <h3>
+                                Frauenanteil bei den Komponist:innen
+                            </h3>
+                        </div>
                         <div class="fact">
                             <h3>ESC ohne Songs von Frauen</h3>
-                            <p>Die Komponisten beim ESC sind mit &uuml;berw&auml;ltigender Mehrheit m&auml;nnlich. In vielen Jahren wurde sogar nicht eine einzige Frau als Komponistin genannt.</p>
+                            <p>Die Komponisten beim ESC sind mit &uuml;berw&auml;ltigender Mehrheit m&auml;nnlich. In
+                                vielen Jahren wurde sogar nicht eine einzige Frau als Komponistin genannt.</p>
                         </div>
                         <div class="fact">
                             <h3>Leichte Besserung in Sicht</h3>
-                            <p>Mittlerweile steigt der Frauenanteil stetig an. Von einer Gleichstellung ist er allerdings noch ein wenig entfernt.</p>
+                            <p>Mittlerweile steigt der Frauenanteil stetig an. Von einer Gleichstellung ist er
+                                allerdings noch ein wenig entfernt.</p>
                         </div>
-                   
+
                     </div>
                 </section>
+                <section class="trenner"></section>
                 <section class="split">
                     <div class="right caption">
                         <h3>Die Amerikanerin</h3>
-                        <p>Die einzige Frau unter den Top 11 der Komponisten ist die Amerikanerin Sharon Vaughn. Die 75-J&auml;hrige hat an 8 ESC-Songs mitgewirkt. Komponiert hat sie unter anderem f&uuml;r Irland, Russland und Griechenland, nicht aber f&uuml;r Schweden, wo sie viele Jahre lang lebte.</p>
+                        <p>Die einzige Frau unter den Top 11 der Komponisten ist die Amerikanerin Sharon Vaughn. Die
+                            75-J&auml;hrige hat an 8 ESC-Songs mitgewirkt. Komponiert hat sie unter anderem f&uuml;r
+                            Irland, Russland und Griechenland, nicht aber f&uuml;r Schweden, wo sie viele Jahre lang
+                            lebte.</p>
                     </div>
                     <div class="left image">
                         <h3 class="caption parallaxweak" id="sharonname">Sharon Vaughn</h3>
@@ -383,58 +407,290 @@
                     <div class="side">
                         <div class="fact eins kompo">
                             <h3>Durchschnittliche Anzahl von Komponisten &amp; Textern je ESC-Song</h3>
-                        </div> 
+                        </div>
                         <div class="fact zwei kompo">
                             <h3>Mehr Komponisten</h3>
-                            <p>Die durchschnittliche Zahl von ausgewiesenen Komponisten pro Song hat sich im Trend mehr als verdoppelt. Beim Song mit den meisten Komponisten waren sogar 8 beteiligt.</p>
-                        </div> 
+                            <p>Die durchschnittliche Zahl von ausgewiesenen Komponisten pro Song hat sich im Trend mehr
+                                als verdoppelt. Beim Song mit den meisten Komponisten waren sogar 8 beteiligt.</p>
+                        </div>
                         <div class="fact drei kompo">
                             <h3>Manchmal Texter</h3>
-                            <p>Im Durchschnitt arbeiten am Text weniger Menschen, als an der Melodie. Der Trend ist hier gleichbleibend, nicht immer ist &uuml;berhaupt jemand seperat als Texter ausgewiesen.</p>
-                        </div> 
+                            <p>Im Durchschnitt arbeiten am Text weniger Menschen, als an der Melodie. Der Trend ist hier
+                                gleichbleibend, nicht immer ist &uuml;berhaupt jemand seperat als Texter ausgewiesen.
+                            </p>
+                        </div>
                     </div>
                 </section>
-
+                <section class="trenner"></section>
             </div>
 
 
     </div>
     <section>
         <div class="video-container">
-        <video muted autoplay loop>
-            <source src="./Resources/vid/Laender.mp4" type="video/mp4">
-        </video>
-        <img class="overlay" src="./Resources/img/bg/muster4.jpg">
-        <div class="video-content">
-            <div class="video-title" id="title-lang">
-                <h2>L&auml;nder und Punkte</h2>
+            <video muted autoplay loop>
+                <source src="./Resources/vid/Laender.mp4" type="video/mp4">
+            </video>
+            <img class="overlay" src="./Resources/img/bg/muster4.jpg">
+            <div class="video-content">
+                <div class="video-title" id="title-lang">
+                    <h2>L&auml;nder und Punkte</h2>
+                </div>
             </div>
-        </div>
         </div>
     </section>
     <section class="background points">
         <div class="content">
             <section class="text">
-                <h3>Welche Sprache f&uuml;hrt uns zum Erfolg?</h3>
-                <p>Zur&uuml;ck zu unserem Song: <br />
-                    Welche Sprachen versprechen f&uuml;r uns den gr&ouml;&szlig;ten Erfolg? Lieber in unserer
-                    Landessprache bleiben, funktioniert Englisch immer, oder lieber etwas ganz Exotisches?</p>
+                <h3>&Uuml;ber 70.000 Punkte an 52 L&auml;nder</h3>
+                <p>Wie war das eigentlich mit der Punktevergabe? Und seit wann nimmt Australien am ESC teil? Welche L&auml;nder sind die erfolgreichsten, und schneiden schlecht ab? Antworten auf all die Fragen in den n&auml;chsten Grafiken.</p>
             </section>
 
-
-            <section class="bildtext">
-                <div class="centertext parallax">
-                    <h3><a href="https://github.com/timvonbis/timvonbis.github.io">Github</a></h3>
-    </div>
-                <div class="centerbilder">
-            
-                    <img class="hinten" src="./Resources/img/bg/Bild-Image/flaggenmeer.png">
-                </div>
+                   <section class="split">
+                    <div class="left image">
+                        <img class="parallax" src="./Resources/img/people/ireland-dana.png">
+    
+                        <h1 class="bgcaption parallaxstrong" id="dananame">Dana <br>&mdash; All Kinds Of Everything</h1>
+                    </div>
+                    <div class="right caption">
+                        <h3>Das erfolgreichste Land</h3>
+                        <p>
+                            Zuerst zu den Gewinnern: Obwohl Irland nur an 55 von 65 ESCs teilgenommen hat, bleibt es das erfolgreichste Land, indem es bereits 7 Mal den ersten Platz abger&auml;umt hat. Das k&ouml;nnte sich aber bald &auml;ndern: Seit den 2000ern k&ouml;nnen Irlands Beitr&auml;ge nur noch m&auml;&szlig;ige Erfolge verbuchen. Auf Platz 2 folgt Schweden mit 6 bisherigen ESC-Siegen.
+                        </p>
+                    </div>
                     </section>
-            </div>
+
+                 
+            <section class="zeitleiste horizontal-scroll-container">
+                <div class="zeitleiste-container horizontal-scroll">
+                    <h1 id="titel-zeitleiste">
+                        Eine kurze Geschichte der Punktevergabe
+                    </h1>
+                    <div id="zeitleiste-border"></div>
+                    <div id="zeitleiste-border-long-container">
+                        <div id="zeitleiste-border-long"></div>
+                    </div>
+
+                    <div class="zl-jahr zl-spalte-1" >
+                        <h3>1956</h3>
+                    </div>
+                    <div class="zl-jahr zl-spalte-2">
+                        <h3>1957</h3>
+                    </div>
+                    <div class="zl-jahr zl-spalte-3">
+                        <h3>1962-74</h3>
+                    </div>
+                    <div class="zl-jahr zl-spalte-4">
+                        <h3>1975</h3>
+                    </div>
+                    <div class="zl-jahr zl-spalte-5">
+                        <h3>1997</h3>
+                    </div>
+                    <div class="zl-jahr zl-spalte-6">
+                        <h3>1998</h3>
+                    </div>
+                    <div class="zl-jahr zl-spalte-7">
+                        <h3>2009-15</h3>
+                    </div>
+                    <div class="zl-jahr zl-spalte-8">
+                        <h3>2016</h3>
+                    </div>
+                    <div class="zl-jahr zl-spalte-9">
+                        <h3>2019</h3>
+                    </div>
+
+                    <div class="zl-kreis-container zl-spalte-0">
+                        <svg class="zl-kreis-svg" viewBox="0 0 10 10">
+                            <circle cx="5" cy="5" r="5" />
+                        </svg>
+                    </div>
+                    <div class="zl-kreis-container zl-spalte-1">
+                        <svg class="zl-kreis-svg" viewBox="0 0 10 10">
+                            <circle cx="5" cy="5" r="5" />
+                        </svg>
+                    </div>
+                    <div class="zl-kreis-container zl-spalte-2">
+                        <svg class="zl-kreis-svg" viewBox="0 0 10 10">
+                            <circle cx="5" cy="5" r="5" />
+                        </svg>
+                    </div>
+                    <div class="zl-kreis-container zl-spalte-3">
+                        <svg class="zl-kreis-svg" viewBox="0 0 10 10">
+                            <circle cx="5" cy="5" r="5" />
+                        </svg>
+                    </div>
+                    <div class="zl-kreis-container zl-spalte-4">
+                        <svg class="zl-kreis-svg" viewBox="0 0 10 10">
+                            <circle cx="5" cy="5" r="5" />
+                        </svg>
+                    </div>
+                    <div class="zl-kreis-container zl-spalte-5">
+                        <svg class="zl-kreis-svg" viewBox="0 0 10 10">
+                            <circle cx="5" cy="5" r="5" />
+                        </svg>
+                    </div>
+                    <div class="zl-kreis-container zl-spalte-6">
+                        <svg class="zl-kreis-svg" viewBox="0 0 10 10">
+                            <circle cx="5" cy="5" r="5" />
+                        </svg>
+                    </div>
+                    <div class="zl-kreis-container zl-spalte-7">
+                        <svg class="zl-kreis-svg" viewBox="0 0 10 10">
+                            <circle cx="5" cy="5" r="5" />
+                        </svg>
+                    </div>
+                    <div class="zl-kreis-container zl-spalte-8">
+                        <svg class="zl-kreis-svg" viewBox="0 0 10 10">
+                            <circle cx="5" cy="5" r="5" />
+                        </svg>
+                    </div>
+                    <div class="zl-kreis-container zl-spalte-9">
+                        <svg class="zl-kreis-svg" viewBox="0 0 10 10">
+                            <circle cx="5" cy="5" r="5" />
+                        </svg>
+                    </div>
+                    <div class="zl-header zl-spalte-1">
+                       <h3>Der erste ESC</h3>
+                    </div>
+                    <div class="zl-text zl-spalte-1">
+                        <p>Beim ersten ESC haben je Land zwei Jurymitglieder alle Songs mit einem bis zehn Punkten bewertet. Viel ist von diesem ersten ESC jedoch nicht &uuml;berliefert. Die Stimmenvergabe lief im Verborgenen ab, und es ist kein Videomaterial mehr zur Veranstaltung verf&uuml;gbar. </p>
+                    </div>
+                    <div class="zl-header zl-spalte-2">
+                        <h3>Je Juror einen Punkt</h3>
+                     </div>
+                    <div class="zl-text zl-spalte-2">
+                        <p>10-k&ouml;pfige Jurys vergeben nun je einen Punkt an ihren pers&ouml;nlichen Favoriten, sodass jedes teilnehmende Land insgesamt 10 Punkte vergibt.</p>
+                    </div>
+                    <div class="zl-header zl-spalte-3">
+                        <h3>Immer ein bisschen anders</h3>
+                     </div>
+                    <div class="zl-text zl-spalte-3">
+                        <p>Das System bleibt mit vielen Variationen bestehen, oft mit leichten &Auml;nderungen, wie viele Punkte genau an wie viele L&auml;nder vergeben werden. </p>
+                    </div>
+                    <div class="zl-header zl-spalte-4">
+                        <h3>Douze Points
+                        </h3>
+                     </div>
+                    <div class="zl-text zl-spalte-4">
+                        <p>Das aktuelle 12-Punkte-System wird eingef&uuml;hrt. Das System ist mittlerweile eng mit dem ESC verbunden und auch als als &#8222;douze points&ldquo;-System bekannt. Jedes Land vergibt per Jury Punkte von 1-8, 10 Punkte und zuletzt 12 Punkte.</p>
+                    </div>
+                    <div class="zl-header zl-spalte-5">
+                        <h3>Televoting-Test
+                        </h3>
+                     </div>
+                    <div class="zl-text zl-spalte-5">
+                        <p>Das Televoting wird in Deutschland, Schweden, &Ouml;sterreich, der Schwei&szlig; und dem Vereinigtem K&ouml;nigreich getestet. In allen anderen bleibt die Jury erstmal bestehen.</p>
+                    </div>
+                    <div class="zl-header zl-spalte-6">
+                        <h3>Ad&eacute; Jury
+                        </h3>
+                     </div>
+                    <div class="zl-text zl-spalte-6">
+                        <p>Die Jury wird weitesgehend durch das Televoting abgel&ouml;st, in wenigen L&auml;ndern, wo das Televoting technisch noch nicht umsetzbar ist, bleibt die Jury vorr&uuml;bergehend.</p>
+                    </div>
+                    <div class="zl-header zl-spalte-7">
+                        <h3>Welcome back, Jury 
+                        </h3>
+                     </div>
+                    <div class="zl-text zl-spalte-7">
+                        <p>Die Punktzahlen jedes Landes werden nun zu je 50% von Publikum und Jury bestimmt.</p>
+                    </div>
+                    <div class="zl-header zl-spalte-8">
+                        <h3>Getrennte Votes 
+                        </h3> 
+                        </div>
+                    <div class="zl-text zl-spalte-8">
+                        <p>Die Punktevergabe wird getrennt in die Punkte von der Jury, wie gehabt von den L&auml;ndern vergeben werden, und die Publikumsvotes, die danach gesammelt zu den Ergebnissen addiert werden.</p>
+                    </div>
+                    <div class="zl-header zl-spalte-9">
+                        <h3>Mehr Spannung 
+                        </h3>
+                     </div>
+                    <div class="zl-text zl-spalte-9">
+                        <p>Um die Spannung zu erh&ouml;hen, erhalten die Teilnehmer die Punkte der Zuschauer in der umgekehrten Reihenfolge der Juryergebnisse.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="split">
+                      
+                <div class="right caption">
+                    <h3>The Biggest Loser</h3>
+                    <p>
+                        Norwegen und Finnland teilen sich den Negativrekord der meisten schlechten Pl&auml;tze beim ESC. Ganze 11 Mal hat es bei jedem der L&auml;nder nur f&uuml;r den letzten Platz gereicht.
+                    </p>
+                </div>  <div class="left image">
+                    <img class="parallax" src="./Resources/img/people/finnland-schlecht.png">
+        
+                    <h1 class="bgcaption parallaxstrong" id="schlecht-zahl">11</h1>
+                </div>
+                </section>
+                <section class="split">
+                    <div class="left image">
+    
+                        <img class="parallax" src="./Resources/img/people/portugal-endlich.png">
+                        <h3 class="bgcaption parallaxstrong" id="portugal-name">Salvador Sobral <br>&mdash; Portugal</h1>
+                    </div>
+                   
+                    <div class="right caption">
+                        <h3>Das meiste Durchhalte&shy;verm&ouml;gen</h3>
+                        <p>
+                           Am l&auml;ngsten auf einen Sieg warten musste Portugal. &Uuml;ber 53 Jahre hinweg nahm Portugal 48 Mal am ESC teil, ohne auch nur ein Mal zu gewinnen. Das erste Mal geklappt hat es 2017 mit dem Titel &bdquo;Amar pelos dois&ldquo; von S&auml;nger Salvador Sobral
+                        </p>
+                    </div> 
+     </section>
+     <section class="text">
+        <h3>Geschichte der teilnehmenden L&auml;nder</h3>
+        <p>L&auml;ngst ist der ESC &uuml;ber Europa hinaus gewachsen. Mitmachen darf grunds&auml;tzlich jeder, der Mitglied der European Broadcasting Union ist. Wie sich die Teilnehmer &uuml;ber die Jahre gewandelt haben, nun in der Karte.</p>
+    </section>
+
+            <section class="diagramm karte" id="section-karte">
+
+                <div class="object-full">
+                    <div class="karte-overlay">
+                        <h1 id="karte-1956">1956</h1>
+                        <h1 id="karte-1960">1960</h1>
+                        <h1 id="karte-1970">1970</h1>
+                        <h1 id="karte-1980">1980</h1>
+                        <h1 id="karte-1990">1990</h1>
+                        <h1 id="karte-2000">2000</h1>
+                        <h1 id="karte-2010">2010</h1>
+                        <h1 id="karte-2020">2020</h1>
+                    </div>
+                    <figure id="figure-karte">
+                        
+                    </figure>
+                </div>
             </section>
 
-        
+
+            <section class="trenner"></section>
+
+            <section class="text">
+                <h3>Auf die n&auml;chsten 66 Jahre</h3>
+                <p>F&uuml;r die n&auml;chsten Ausgaben des Eurovision-Song-Contests sind wir nun auf jeden Fall gut gewappnet. Auch einem Gewinn mit unserem Song steht nun nicht mehr entgegen! Vielleicht werden wir so erfolgreich wie die Iren. &mdash; Wenn bis dahin die Abstimmungsregeln nicht wieder ge&auml;ndert wurden.</p>
+            </section>
+
+
+            <section class="outro">
+                <div class="outro-grid">
+                    <div class="outro-container">
+                    <a href="https://github.com/timvonbis/timvonbis.github.io">Github</a>
+                    <p>von Tim von Bischopinck
+                        <br>betreut von Prof. Roger Walk <br>
+                        SoSo 2020 &mdash; FH Dortmund
+                    </p>
+                    </div>
+                 </div>
+                   
+                
+            </section>
+        </div>
+    </section>
+    </section>
+
+    
+
+
 </body>
 </script>
 

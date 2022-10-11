@@ -1,18 +1,37 @@
 /* #region Allgemein */
 
-.main{font-size:1em;}
-
-@media screen and (max-width: 800px){
-.main{font-size:0.7em}
+.main {
+    font-size: 1em;
+    hyphens: manual;
 }
 
-@media screen and (min-width: 1800px){ 
-.main{font-size:1.25em} 
+@media screen and (max-width: 800px) {
+    .main {
+        font-size: 0.7em
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .main {
+        font-size: 1.25em
+    }
 }
 
 * {
     margin: 0;
     padding: 0;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body,
@@ -35,8 +54,9 @@ h6 {
 
 }
 
-h2{
+h2 {
     font-size: 6em;
+    text-align: center;
 }
 
 p,
@@ -51,29 +71,29 @@ text {
 }
 
 /*Parallax Fix */
-.parallaxweak{
+.parallaxweak {
     transform: translate(0, 25px);
 }
-.parallax{
+
+.parallax {
     transform: translate(0, 50px);
 }
-.parallaxstrong{
+
+.parallaxstrong {
     transform: translate(0, 90px);
 }
 
 /* #endregion */
 /* #region Trenner */
-div.trenner{
-position: relative;
-height: 20vh;
-min-height: 100px;
-max-height: 300px;
-width: 100%;
+section.trenner {
+    width: 100%;
+    position: relative;
+    min-height: 5em;
 }
-
-.border-medium{
-    margin-top: 200px;
-    margin-bottom: 200px;
+section.trenner-klein {
+    width: 100%;
+    position: relative;
+    min-height: 2em;
 }
 
 /* #endregion */
@@ -86,7 +106,7 @@ h3 {
 
 svg path {
     fill: none;
-    stroke: grey;
+    stroke: grey; 
 }
 
 figure.diagramm {
@@ -105,6 +125,7 @@ g.tick text {
 g.tick line {
     stroke: grey;
 }
+
 g.sprachen line {
     stroke: grey;
 }
@@ -116,7 +137,7 @@ g.sprachen line {
 }
 
 .legende-text {
-    font-size:12px;
+    font-size: 12px;
 }
 
 rect.bar {
@@ -208,7 +229,7 @@ div.bgpic h1 {
 
 /* #endregion */
 /* #region Video-Titel */
-div.video-container{
+div.video-container {
     height: 100vh;
     width: 100vw;
     max-width: 100%;
@@ -216,6 +237,7 @@ div.video-container{
     min-height: 400px;
     position: relative;
 }
+
 div.video-container video {
     object-fit: cover;
     position: absolute;
@@ -223,6 +245,7 @@ div.video-container video {
     height: 100%;
     filter: grayscale(100%)
 }
+
 div.video-container img.overlay {
     object-fit: cover;
     position: absolute;
@@ -231,7 +254,8 @@ div.video-container img.overlay {
     z-index: 3;
     mix-blend-mode: multiply;
 }
-div.video-content  {
+
+div.video-content {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -254,10 +278,12 @@ section.background {
 div.content {
     max-width: 1800px;
     width: 100%;
+    min-width: 400px;
     height: max-content;
-    overflow: hidden;
+    overflow: scroll;
     display: relative;
     margin: 0px auto;
+    padding-top: 2em;
 }
 
 section.diagramm {
@@ -265,9 +291,10 @@ section.diagramm {
     height: max-content;
     overflow: hidden;
     display: flex;
-    margin: 0px auto;
+    margin: 0 auto 0;
     justify-content: center;
     align-content: center;
+    position: relative;
 }
 
 section.diagramm div.object {
@@ -275,41 +302,40 @@ section.diagramm div.object {
     height: 100vh;
     min-height: 100vh;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
+
 section.diagramm div.object.langprevalence {
     height: max-content;
-    width: 100%;    
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-section.text{
-    width: 30%;
-    max-width: 500px;
-    min-width: 400px;
+
+section.text {
+    width: 40%;
+    max-width: 600px;
+    min-width: 200px;
     min-height: max-content;
     height: 60vh;
-    max-height: 600px;
-    margin: 40px auto;
-    box-sizing: border-box;
-    padding: 30px;
+    padding: 0 2em;   
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 0 auto;
 }
 
 figure.diagramm {
     width: 100%;
     min-width: 250px;
-
 
 }
 
@@ -317,7 +343,7 @@ section.diagramm div.side {
     width: 30%;
     min-width: 200px;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 10px 10px 300px;
     display: block;
     max-width: 300px;
     height: max-content;
@@ -333,7 +359,7 @@ section.diagramm div.side div.fact {
     flex-direction: column;
     align-content: left;
     min-height: 300px;
-
+    max-height: 600px;
 }
 
 /* #endregion */
@@ -342,6 +368,7 @@ section.diagramm div.side div.fact {
 section.background.language {
     background-image: url(/Resources/img/bg/1920w/lila.jpg);
 }
+
 section.background.composer {
     background-image: url(/Resources/img/bg/1920w/blau.jpg);
 }
@@ -363,31 +390,35 @@ strong.fr {
 }
 
 /*Sprache Leiste */
-section.langprevalence{
+section.langprevalence {
     height: 2000px;
 }
 
-section.langprevalence div.side{
+section.langprevalence div.side {
     height: 100%;
     width: 70%;
     position: relative;
 }
-section.langprevalence div.side div.fact{
+
+section.langprevalence div.side div.fact {
     height: max-content;
     width: 100%;
     position: absolute;
 }
-section.langprevalence div.side div.fact.eins{
+
+section.langprevalence div.side div.fact.eins {
     top: 10%;
 }
-section.langprevalence div.side div.fact.zwei{
+
+section.langprevalence div.side div.fact.zwei {
     top: 45%;
 }
-section.langprevalence div.side div.fact.drei{
+
+section.langprevalence div.side div.fact.drei {
     top: 80%;
 }
 
-section.langprevalence div.object{
+section.langprevalence div.object {
     height: 100%;
     width: 30%;
     max-width: 500px;
@@ -398,41 +429,48 @@ section.langprevalence div.object{
 
 /* #endregion */
 /* #region Split */
-section.split{
-    min-height: 400px;
+section.split {
+
     min-width: 100px;
     width: 100%;
-    display:flex;
-    padding: 0px;
-    position: relative;
-    max-height: 500px;
     max-width: 1200px;
-    margin: 80px auto 120px;
+    display: flex;
+    position: relative;
+    margin: auto;
+    padding: 0em 1em 0em;
+    height: max-content;
 }
-section.split div.image{
-width: 55%;
-min-width: 100px;
-padding: 10px;
-position: relative;
-max-height: 500px;
+
+section.split div.image {
+    width: 60%;
+    position: relative;
+    padding: 2em 2em;
+
 }
-section.split div.image img{
+
+section.split div.image img {
     width: 100%;
-    min-width: 100px;
     min-width: 100px;
     position: relative;
     margin: auto 0;
-    max-height: 500px;
-    max-width: 500px;
     z-index: 1;
-    }
+    padding: 0 2em;
+}
+
+section.split div.image img.hinten {
+position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
 section.split div.image h3.caption {
     position: absolute;
-left: 5%;
-top: 75%;
+    left: 5%;
+    top: 75%;
     z-index: 10;
-    width:fit-content;
-    height:70px;
+    width: fit-content;
+    height: 70px;
     font-size: 2.8em;
 }
 
@@ -440,93 +478,46 @@ section.split div.image p.caption {
     position: absolute;
     left: 20%;
     top: 56%;
-        z-index: 10;
-        width:fit-content;
-        height:70px;
-        font-size: 1em; 
-        line-height: 140%;
+    z-index: 10;
+    width: fit-content;
+    height: 70px;
+    font-size: 1em;
+    line-height: 140%;
 }
 
-section.split div.caption{
-width: 45%;
-min-width: 100px;
-padding: 30px;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+section.split div.caption {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2em;
 }
 
 h1.bgcaption {
     position: absolute;
-left: 57%;
-top: 50%;
+    left: 57%;
+    top: 50%;
     z-index: 0.5;
-    width:fit-content;
-    height:100px;
+    width: fit-content;
+    height: max-content;
     font-size: 12em;
+    text-align: center;
 }
 
-div.captioncontainer{
+div.captioncontainer {
     position: absolute;
-    left: 70%;
-    top: 40%;
+    right: 2%;
+    top: 22%;
     z-index: 0.5;
-    width:fit-content;
-    height:100px;
+    width: fit-content;
+    height: 100px;
 }
 
-
-#meinungerzahl {
-    left: 5%;
-    top: 30%;
+#lovebulgarialyrics {
+    bottom: 10%;
+    left: 10%;
 }
-#meinungername {
-    left: 40%;
-}
-
-#gsonzahl {
-    top: 20%;
-    left: 50%;
-}
-
-#milanovzahl {
-    top: 28%;
-    left: 50%;
-}
-
-#sharonzahl {
- left: 16%;
- top: 17%;
-}
-#sharonname{
-    top: 60%;
-    left: 30%;
-}
-/* #endregion */
-/* #region Split-Hero */
-section.split div.image.hero{
-    width: 60%;
-    min-width: 100px;
-    padding: 10px;
-    position: relative;
-    max-height: 500px;
-    }
-    section.split div.image.hero img{
-        width: 100%;
-        min-width: 100px;
-        min-width: 100px;
-        position: absolute;
-        margin: auto 0;
-        max-height: 500px;
-        max-width: 500px;
-        z-index: 1;
-        right: 0;
-        }
-
-/* #endregion */
-/* #region Sprachen Fakte Split */
-
 
 #bulgaria-zahl {
     top: 0;
@@ -535,70 +526,313 @@ section.split div.image.hero{
     line-height: 0.5em;
 }
 
-#fantasie-name{
+#fantasie-name {
     font-size: 3em;
     left: 40%;
-    top: 30%;
+    top: 20%;
     line-height: 90%;
 }
 
 #fantasie-lyrics {
-top: 65%;
-left:30%;
+    top: 50%;
+    left: 10%;
+}
+
+
+#meinungerzahl {
+    left: 20%;
+    top: 30%;
+}
+
+#meinungername {
+    left: 46%;
+    top: 70%;
+}
+
+#gsonzahl {
+    top: 18%;
+    left: 56%;
+}
+#gsonname {
+    top:65%;
+    left: 10%;
+
+}
+#milanovname {
+    top:65%;
+    left: 10%;
+
+}
+
+#milanovzahl {
+    top: 23%;
+    left: 60%;
+}
+
+#sharonzahl {
+    left: 25%;
+    top: 20%;
+}
+
+#sharonname {
+    top: 70%;
+    left: 45%;
+}
+
+#siegel-name {
+    left: 45%;
+    top: 65%;
+}
+
+#siegel-zahl {
+    left: 8%;
+    top: 16%;
+}
+
+#dananame {
+    left: 8%;
+    z-index: 2;
+    top: 50%;
+    font-size: 3em;
+ text-align: left;
+    line-height: 90%;
+    max-width: 50%;
+}
+
+#schlecht-zahl {
+    left: 13%;
+    top: 22%;
+}
+
+#portugal-name {
+    left: 8%;
+    z-index: 2;
+    top: 60%;
+    font-size: 3em;
+ text-align: left;
+    line-height: 90%;
+    max-width: 70%;
+    position: absolute;
 }
 
 /* #endregion */
-/* #region Texte mit Bildern */
-section.bildtext {
-    width: 100%;
-    min-width: 500px;
+/* #region Zeitleiste */
+section.zeitleiste {
     height: 100vh;
-    max-height: 1300px;
-    min-height: 700px;
+    min-height: 500px;
+    width: 100vw;
     position: relative;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    overflow: hidden;
+    overflow: visible;
 }
-
-section.bildtext div.centertext {
-    width: 30%;
-    min-width: 400px;
+section.zeitleiste div.zeitleiste-container {
     height: 100%;
-    display: flex;
-    position: absolute;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 10;
+    width: 5000px;
+    overflow: visible;
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(2fr, 45vw) minmax(2fr, 45vw) repeat(9, 1fr) 0.5fr 0.5fr ;
+    grid-template-rows: 1fr 1.8fr 2.2fr 1fr 1fr 0.5fr;
+    gap: 0 4em; 
+}
+
+h1#titel-zeitleiste{
+    grid-area: 2/1/span 2/span 2;
+    text-align: center;
+    place-self: center;
+    font-size: 3em;
+    width: 50%;
+}
+
+div#zeitleiste-border{
+    grid-area: 5/2/span 1/ span 11;
+    border-top: 3pt solid white;
+}
+
+div#zeitleiste-border-long-container{
+    grid-area: 4/1/span 2/ span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
 
 }
 
-section.bildtext div.centerbilder {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    position: absolute;
-    overflow: hidden;
-
+div#zeitleiste-border-long{
+    grid-area: 2/2/span 1/ span 1;
+    border-top: 3pt solid white;
+    align-self: stretch;
+    justify-self: stretch;
 }
 
-section.bildtext div.centerbilder img.hinten {
-    width: 100%;
-    height: auto;
+/* Allgemeine Regeln */
+div.zl-jahr{
+    grid-row: 4/ span 1;
+    align-self: end;
+    justify-self: center;
+    box-sizing: content-box;
+    padding-bottom: 3px;
     position: absolute;
-    bottom: 0;
 
 }
-
-section.bildtext div.centerbilder img.vorne {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    bottom: 0;
-    z-index: 5;
+div.zl-jahr h3 {
+    text-align: center;
 }
+
+div.zl-kreis-container{
+    width: 20px;
+    height: 20px;
+    place-self: center;
+    grid-row: 4 / span 2;
+    box-sizing: content-box;
+    padding-top: 6px;
+}
+div.zl-kreis-container svg circle{
+    fill: white;
+}
+div.zl-text{
+    grid-row: 3 / span 1;
+    align-self: start;
+    justify-self: stretch;
+    padding: 0 0 0 10px;
+}
+div.zl-text p{
+    text-align: left;
+}
+
+div.zl-header{
+    grid-row: 2 / span 1;
+    align-self: end;
+    justify-self: stretch;
+    padding: 0 0 0 10px;
+}
+
+/* sPezifische Regeln */
+
+
+div.zl-spalte-0{
+    grid-column: 1/ span 2;
+}
+div.zl-spalte-1{
+    grid-column: 3/ span 1;
+}
+div.zl-spalte-2{
+    grid-column: 4/ span 1;
+}
+div.zl-spalte-3{
+    grid-column: 5/ span 1;
+}
+div.zl-spalte-4{
+    grid-column: 6/ span 1;
+}
+div.zl-spalte-5{
+    grid-column: 7/ span 1;
+}
+div.zl-spalte-6{
+    grid-column: 8/ span 1;
+}
+div.zl-spalte-7{
+    grid-column: 9/ span 1;
+}
+div.zl-spalte-8{
+    grid-column: 10/ span 1;
+}
+div.zl-spalte-9{
+    grid-column: 11/ span 1;
+}
+/* #endregion */
+/* #region Sprachen Fakte Split */
+
+
 
 
 /* #endregion */
+/* #region Karte Teilnehmeränder */
+section.diagramm div.object-full {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    box-sizing: border-box;
+    padding: 2em;
+    position: relative;
+    
+}
+
+div.karte-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+}
+
+figure#figure-karte{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+}
+
+div.karte-overlay h1{
+position: absolute;
+text-align: left;
+bottom: 20%;
+left: 10%;
+font-size: 6em;
+opacity: 0;
+}
+
+.dataland {
+ fill: lightgrey;
+ fill-opacity: 0; 
+    stroke: #fff;
+
+}
+
+/* #endregion */
+
+/* #region outro */
+section.outro{
+    margin: auto 0;
+    width: 100%;
+    max-width: 1440px;
+    height: 400px;
+    background-image: url("./img/bg/Bild-Image/flaggenmeer-gr.png");
+    background-size: 100% auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+section.outro div.outro-grid{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid
+}
+
+section.outro div.outro-grid div.outro-container{
+    align-self: center;
+    justify-self: center;
+    width: 700px;
+    font-size: 1.3em;
+    color: white;
+    text-align: center;
+
+}
+
+section.outro div.outro-grid div.outro-container a:link {
+    color: white;
+}
+
+section.outro div.outro-grid div.outro-container a:visited{
+    color: white;
+}
+section.outro div.outro-grid div.outro-container p{
+    font-size: 1em;
+    color: white;
+    line-height: 110%;
+    text-shadow: 3px 0px 5px #000000;
+}
+
+
+
+/* #endregion

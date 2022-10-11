@@ -1,8 +1,9 @@
 //#region Balkendiagramm Komponisten & Gender 
-d3.json("./Resources/data/csvjson.json", function (data) {
-    let widthInput = 800;
-    let heightInput = 500;
-
+d3.json("./Resources/data/csvjson.json").then(function (data) {
+    //  let widthInput = 800;
+    // let heightInput = 500;
+    let widthInput = parseInt(d3.select("div.object").style("width"), 10);
+    let heightInput = parseInt(d3.select("div.object").style("height"), 10);
     let margin = { top: 10, right: 30, bottom: 30, left: 60 },
         width = widthInput - margin.left - margin.right,
         height = heightInput - margin.top - margin.bottom;
@@ -45,12 +46,17 @@ d3.json("./Resources/data/csvjson.json", function (data) {
 
         yAxis = d3.axisLeft(yScale)
             .ticks(5)
-            .tickFormat(function (d) { return d + "%"; });
+            .tickFormat(function (d) { return d + "%"; })
+
 
     yAxisGrid = d3.axisLeft(yScale)
         .ticks(5)
         .tickFormat('')
-        .tickSize(710);
+        .tickSize(width);
+
+
+
+
 
     let gGender = svg.append("g")
         .attr("class", "compgender");
@@ -61,12 +67,17 @@ d3.json("./Resources/data/csvjson.json", function (data) {
 
     gGender.append("g")
         .call(yAxis)
+        .selectAll("path.domain")
+        .remove();
+
 
 
     gGender.append("g")
         .call(yAxisGrid)
         .attr("class", "grid")
-        .attr("transform", "translate(710,0)");
+        .attr("transform", `translate(${width},0)`)
+        .selectAll("path.domain")
+        .remove();
 
     gGender.selectAll(".genderBar")
         .data(data)
@@ -89,10 +100,13 @@ d3.json("./Resources/data/csvjson.json", function (data) {
 //#endregion
 //#region Häufigkeit SPrachen 
 
-d3.json("./Resources/data/sprache-alle.json", function (data) {
+d3.json("./Resources/data/sprache-alle.json").then(function (data) {
 
-    let widthInput = 800;
-    let heightInput = 400;
+    //let widthInput = 800;
+    //let heightInput = 400;
+
+    let widthInput = parseInt(d3.select("div.object").style("width"), 10);
+    let heightInput = parseInt(d3.select("div.object").style("height"), 10);
 
     console.log("hi");
     let margin = { top: 10, right: 30, bottom: 30, left: 60 },
@@ -209,10 +223,13 @@ d3.json("./Resources/data/sprache-alle.json", function (data) {
 });
 //#endregion
 //#region Sprachanteil/Erfolg: Bubble Diagram
-d3.json("./Resources/data/langsuccess.json", function (data) {
+d3.json("./Resources/data/langsuccess.json").then(function (data) {
 
-    let widthInput = 800;
-    let heightInput = 600;
+    // let widthInput = 800;
+    // let heightInput = 600;
+
+    let widthInput = parseInt(d3.select("div.object").style("width"), 10);
+    let heightInput = parseInt(d3.select("div.object").style("height"), 10);
 
     let margin = { top: 80, right: 50, bottom: 100, left: 80 },
         width = widthInput - margin.left - margin.right,
@@ -314,7 +331,7 @@ d3.json("./Resources/data/langsuccess.json", function (data) {
     svg.append("g")
         .append("text")
         .text("Durchschnittlicher Platz")
-        .attr("transform", "translate(710,580)")
+        .attr("transform", `translate(${width},${height + 45})`)
         .attr("text-anchor", "end")
 
     //Land-Label
@@ -333,17 +350,17 @@ d3.json("./Resources/data/langsuccess.json", function (data) {
         .attr("display", "inline")
 
     //Label Korrektur rechts
-  svg.selectAll("g.Montenegro.label,g.San.Marino.label")
-   .attr("transform", "translate(-28,0)")
-    .attr("text-anchor", "end");
-        
+    svg.selectAll("g.Montenegro.label,g.San.Marino.label")
+        .attr("transform", "translate(-28,0)")
+        .attr("text-anchor", "end");
+
 })
 
 
 
 //#endregion
 //#region Langprevalence
-d3.json("./Resources/data/spracheanzahl.json", function (data) {
+d3.json("./Resources/data/spracheanzahl.json").then(function (data) {
 
     console.log("3test");
     let widthInput = 300;
@@ -365,7 +382,12 @@ d3.json("./Resources/data/spracheanzahl.json", function (data) {
         .range([0, height]);
 
     let yScaleTicks = d3.axisLeft(yScale)
-        .ticks(20)
+        .ticks(20);
+
+    let yScaleTicksOnly = d3.axisLeft(yScale)
+        .ticks(150)
+        .tickFormat("")
+        .tickSize(4);
 
     //Labels
     svg.selectAll("g")
@@ -381,14 +403,18 @@ d3.json("./Resources/data/spracheanzahl.json", function (data) {
         //achse
         svg.append("g")
             .attr("class", "axis")
-            .call(yScaleTicks);
+            .call(yScaleTicksOnly);
+
+    svg.append("g")
+        .call(yScaleTicks);
+
 
 
     //Legende
     svg.append("g")
         .append("text")
         .text("Durchschnittlicher Platz")
-        .attr("transform", "translate(-30,-5) rotate(-90)")
+        .attr("transform", "translate(-40,-5) rotate(-90)")
         .attr("text-anchor", "end")
         .attr("class", "legende-text")
 
@@ -474,6 +500,10 @@ svg.append("g")
 
 
 //#endregion
+
+
+
+//#endregion
 //#region Splash-Screen Animation
 
 
@@ -509,10 +539,10 @@ function frageTl() {
 
 //#endregion
 //#region Häufigkeiten Kompnisten und Texter
-d3.json("./Resources/data/kompo.json", function (data) {
+d3.json("./Resources/data/kompo.json").then(function (data) {
 
-    let widthInput = 800;
-    let heightInput = 400;
+    let widthInput = parseInt(d3.select("div.object").style("width"), 10);
+    let heightInput = parseInt(d3.select("div.object").style("height"), 10);
 
     let margin = { top: 10, right: 30, bottom: 30, left: 60 },
         width = widthInput - margin.left - margin.right,
@@ -725,43 +755,43 @@ ScrollTrigger.create({
 
 let bubbleEnterEins = function (d) {
     d3.selectAll("g.Italy.label,g.Sweden.label,g.Russia.label,g.Ukraine.label,g.Azerbaijan.label,g.Turkey.label,g.United.Kingdom.label")
-    .transition()
-    .duration(200)
+        .transition()
+        .duration(200)
         .style("opacity", "1")
 };
 
 let bubbleLeaveEins = function (d) {
     d3.selectAll("g.Italy.label,g.Sweden.label,g.Russia.label,g.Ukraine.label,g.Azerbaijan.label,g.Turkey.label,g.United.Kingdom.label")
-    .transition()
-    .duration(200)
+        .transition()
+        .duration(200)
         .style("opacity", "0")
 };
 
 let bubbleEnterZwei = function (d) {
     d3.selectAll("g.Ireland.label,g.Spain.label,g.France.label,g.Germany.label,g.Austria.label,g.Switzerland.label,g.Portugal.label,g.Latvia.label,g.Armenia.label,g.Moldova.label,g.Slovenia.label")
-    .transition()
-    .duration(200)
+        .transition()
+        .duration(200)
         .style("opacity", "1")
 };
 
 let bubbleLeaveZwei = function (d) {
     d3.selectAll("g.Ireland.label,g.Spain.label,g.France.label,g.Germany.label,g.Austria.label,g.Switzerland.label,g.Portugal.label,g.Latvia.label,g.Armenia.label,g.Moldova.label,g.Slovenia.label")
-    .transition()
-    .duration(200)
+        .transition()
+        .duration(200)
         .style("opacity", "0")
 };
 
 let bubbleEnterDrei = function (d) {
     d3.selectAll("g.Belarus.label,g.Montenegro.label,g.San.Marino.label,g.North.Macedonia.label")
-    .transition()
-    .duration(200)
+        .transition()
+        .duration(200)
         .style("opacity", "1")
 };
 
 let bubbleLeaveDrei = function (d) {
     d3.selectAll("g.Belarus.label,g.Montenegro.label,g.San.Marino.label,g.North.Macedonia.label")
-    .transition()
-    .duration(200)
+        .transition()
+        .duration(200)
         .style("opacity", "0")
 };
 
@@ -860,10 +890,235 @@ ScrollTrigger.create({
 
 
 
+//#endregion
+//#region Parallax and horizontal scroll
+
+const horizontalscroll = gsap.utils.toArray('.horizontal-scroll');
+horizontalscroll.forEach(horizontalscroll => {
+    gsap.to(horizontalscroll, {
+        xPercent: -80,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".horizontal-scroll-container",
+            scrub: 0.1,
+            markers: false,
+            pin: true,
+            end: "+=4000"
+        }
+    })
+});
+
+
+
 
 
 //#endregion
-//#region Parallax
+
+//#region Karte render
+//#region karte1
+
+
+let activeYear = "j1959"
+let kartedrei = function (activeYear) {
+
+    // The svg
+
+    let widthInput = parseInt(d3.select("div.object-full").style("width"), 10);
+    let heightInput = parseInt(d3.select("div.object-full").style("height"), 10);
+
+    //let widthInput = 1300;
+    //let heightInput = 1000;
+
+    let margin = { top: 10, right: 10, bottom: 10, left: 10 },
+        width = widthInput - margin.left - margin.right,
+        height = heightInput - margin.top - margin.bottom;
+
+
+    let svg = d3.select("#figure-karte")
+        .append("svg")
+        .attr("viewBox", `0 0 ${widthInput} ${heightInput}`)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    console.log("test-karte");
+
+    // Map and projection
+    const path = d3.geoPath();
+    const projection = d3.geoNaturalEarth1()
+        .center([0, 5])
+        .scale(220)
+
+
+        .center([0, 0])
+        .translate([width / 2, height / 2]);
+
+    // Data and color scale
+    let data1956 = new Map()
+    let data1960 = new Map()
+    let data1970 = new Map()
+    let data1980 = new Map()
+    let data1990 = new Map()
+    let data2000 = new Map()
+    let data2010 = new Map()
+    let data2020 = new Map()
+    const colorScale = d3.scaleLinear()
+        .domain([0, 1])
+        .range(["MediumAquaMarine", "white"]);
+
+    // Load external data and boot
+    Promise.all([
+        d3.json("./Resources/map/world.geojson"),
+        d3.csv("./Resources/map/readyforjson.csv", function (d) {
+            data1956.set(d.code, +d.j1956)
+            data1960.set(d.code, +d.j1960)
+            data1970.set(d.code, +d.j1970)
+            data1980.set(d.code, +d.j1980)
+            data1990.set(d.code, +d.j1990)
+            data2000.set(d.code, +d.j2000)
+            data2010.set(d.code, +d.j2010)
+            data2020.set(d.code, +d.j2020)
+
+        })
+    ]).then(function (loadData) {
+        let topo = loadData[0]
+
+        // Draw the map
+        svg.append("g")
+            .selectAll("path")
+            .data(topo.features)
+            .join("path")
+            // draw each country
+            .attr("d", d3.geoPath()
+                .projection(projection)
+            )
+        // set the color of each country
+        //   .style("stroke", "0")
+        //   .style("fill", function (d) {
+        //       d.total = data1956.get(d.code) || 0;
+        //       return colorScale(d.total);
+
+        //   })
+
+
+        //   .filter(function(d){return data.get(d.code) === 1})
+        //  .attr("class", "funztsiebzehn")
+
+        svg.selectAll("path")
+            .classed("dataland", true)
+        svg.selectAll("path")
+            .filter(function (d) { return data1956.get(d.code) === 1 })
+            .classed("data1956", true);
+        svg.selectAll("path")
+            .filter(function (d) { return data1960.get(d.code) === 1 })
+            .classed("data1960", true);
+        svg.selectAll("path")
+            .filter(function (d) { return data1970.get(d.code) === 1 })
+            .classed("data1970", true);
+        svg.selectAll("path")
+            .filter(function (d) { return data1980.get(d.code) === 1 })
+            .classed("data1980", true);
+        svg.selectAll("path")
+            .filter(function (d) { return data1990.get(d.code) === 1 })
+            .classed("data1990", true);
+        svg.selectAll("path")
+            .filter(function (d) { return data2000.get(d.code) === 1 })
+            .classed("data2000", true);
+        svg.selectAll("path")
+            .filter(function (d) { return data2010.get(d.code) === 1 })
+            .classed("data2010", true);
+        svg.selectAll("path")
+            .filter(function (d) { return data2020.get(d.code) === 1 })
+            .classed("data2020", true);
+
+        console.log("karte fertig");
+        karteAni()
+    })
+}
+
+
+
+//#region Karte Scroll und ANimation
+let ani1956 = function () {
+    d3.selectAll(".dataland")
+        .style("fill", "purple");
+    console.log("purple");
+};
+
+
+let karteAni = function () {
+    console.log("purple2");
+    let tlMap = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#section-karte",
+            pin: true,
+            start: "top top",
+            end: "+=2000px",
+            scrub: true,
+            markers: false,
+            snap: {
+                snapTo: "labels", // snap to the closest label in the timeline
+                duration: { min: 0.1, max: 0.4 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+                delay: 0, // wait 0.2 seconds from the last scroll event before doing the snapping
+             
+            }
+        }
+    })  
+    tlMap
+   
+        .to(".data1956", { "fill-opacity": 1, duration: 1 }, "0")
+        .to("#karte-1956", { opacity: 1, duration: 1, }, "0")
+        .addLabel("Jahr1956", ">1")
+       
+      
+        .to("#karte-1956", { opacity: 0, duration: 1 }, ">1")
+        .to(".data1956", { "fill-opacity": 0, duration: 1 }, "<")
+        .to(".data1960", { "fill-opacity": 1, duration: 1, overwrite: true }, ">")
+        .to("#karte-1960", { opacity: 1, duration: 1 }, "<")
+          .addLabel("Jahr1960", ">1")
+
+        .to("#karte-1960", { opacity: 0, duration: 1 }, ">1")
+        .to(".data1960", { "fill-opacity": 0, duration: 1 }, "<")
+        .to(".data1970", { "fill-opacity": 1, duration: 1, overwrite: true }, ">")
+        .to("#karte-1970", { opacity: 1, duration: 1 }, "<")
+        .addLabel("Jahr1970", ">1")
+
+        .to("#karte-1970", { opacity: 0, duration: 1 }, ">1")
+        .to(".data1970", { "fill-opacity": 0, duration: 1 }, "<")
+        .to(".data1980", { "fill-opacity": 1, duration: 1, overwrite: true }, ">")
+        .to("#karte-1980", { opacity: 1, duration: 1 }, "<")
+        .addLabel("Jahr1980", ">1")
+
+        .to("#karte-1980", { opacity: 0, duration: 1 }, ">1")
+        .to(".data1980", { "fill-opacity": 0, duration: 1 }, "<")
+        .to(".data1990", { "fill-opacity": 1, duration: 1, overwrite: true }, ">")
+        .to("#karte-1990", { opacity: 1, duration: 1 }, "<")
+        .addLabel("Jahr1990", ">1")
+
+        .to("#karte-1990", { opacity: 0, duration: 1 }, ">1")
+        .to(".data1990", { "fill-opacity": 0, duration: 1 }, "<")
+        .to(".data2000", { "fill-opacity": 1, duration: 1, overwrite: true }, ">")
+        .to("#karte-2000", { opacity: 1, duration: 1 }, "<")
+        .addLabel("Jahr2000", ">1")
+
+        .to("#karte-2000", { opacity: 0, duration: 1 }, ">1")
+        .to(".data2000", { "fill-opacity": 0, duration: 1 }, "<")
+        .to(".data2010", { "fill-opacity": 1, duration: 1, overwrite: true }, ">")
+        .to("#karte-2010", { opacity: 1, duration: 1 }, "<")
+        .addLabel("Jahr2010", ">1")
+
+        .to("#karte-2010", { opacity: 0, duration: 1 }, ">1")
+        .to(".data2010", { "fill-opacity": 0, duration: 1 }, "<")
+        .to(".data2020", { "fill-opacity": 1, duration: 1, overwrite: true }, ">")
+        .to("#karte-2020", { opacity: 1, duration: 1 }, "<")
+        .addLabel("Jahr2020", ">1")
+
+
+};
+
+kartedrei(activeYear);
+
+//#endregion
+ScrollTrigger.refresh();
 
 const parallaxes = gsap.utils.toArray('.parallax');
 parallaxes.forEach(parallax => {
@@ -871,7 +1126,7 @@ parallaxes.forEach(parallax => {
         y: -100,
         scrollTrigger: {
             trigger: parallax,
-            scrub: true
+            scrub: true,
         }
     })
 });
@@ -896,7 +1151,3 @@ parallaxesstrong.forEach(parallaxstrong => {
         }
     })
 });
-
-
-
-//#endregion
