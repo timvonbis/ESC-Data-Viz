@@ -280,7 +280,7 @@ div.content {
     width: 100%;
     min-width: 400px;
     height: max-content;
-    overflow: scroll;
+    overflow: hidden;
     display: relative;
     margin: 0px auto;
     padding-top: 2em;
@@ -794,7 +794,7 @@ section.outro{
     margin: auto 0;
     width: 100%;
     max-width: 1440px;
-    height: 400px;
+    height: 500px;
     background-image: url("./img/bg/Bild-Image/flaggenmeer-gr.png");
     background-size: 100% auto;
     background-position: center bottom;
