@@ -431,9 +431,10 @@ section.langprevalence div.object {
 /* #region Split */
 section.split {
 
-    min-width: 100px;
-    width: 100%;
-    max-width: 1200px;
+    min-width: 600px;
+    width: 80%;
+    max-width: 1440px;
+    max-width: 80%;
     display: flex;
     position: relative;
     margin: auto;
@@ -793,7 +794,7 @@ opacity: 0;
 section.outro{
     margin: auto 0;
     width: 100%;
-    max-width: 1440px;
+    max-width: 2400px;
     height: 500px;
     background-image: url("./img/bg/Bild-Image/flaggenmeer-gr.png");
     background-size: 100% auto;
